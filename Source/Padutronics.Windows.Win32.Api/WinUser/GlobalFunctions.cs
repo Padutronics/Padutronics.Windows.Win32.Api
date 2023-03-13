@@ -15,6 +15,9 @@ public static class GlobalFunctions
     [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern IntPtr DefWindowProcW(IntPtr hWnd, WM Msg, IntPtr wParam, IntPtr lParam);
 
+    [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
+    public static extern int GetMessageW(ref MSG lpMsg, IntPtr hWnd, WM wMsgFilterMin, WM wMsgFilterMax);
+
     [DllImport(DllNames.User32, SetLastError = true)]
     public static extern int GetSystemMetrics(SM nIndex);
 
