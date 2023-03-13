@@ -8,6 +8,12 @@ namespace Padutronics.Windows.Win32.Api.Tests.WinDef;
 internal sealed class Structure_size_is_correct
 {
     [Test]
+    public void Size_of_POINT()
+    {
+        Assert.That(Marshal.SizeOf(typeof(POINT)), Is.EqualTo(8));
+    }
+
+    [Test]
     public void Size_of_RECT()
     {
         Assert.That(Marshal.SizeOf(typeof(RECT)), Is.EqualTo(16));
