@@ -15,4 +15,16 @@
         <RepositoryUrl>https://github.com/Padutronics/Padutronics.Windows.Win32.Api</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
     </PropertyGroup>
+    <PropertyGroup>
+        <NoWarn>NU5100</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup>
+        <CWrapperProjectName>Padutronics.Windows.Win32.Api.CWrapper</CWrapperProjectName>
+    </PropertyGroup>
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+        <Copy SourceFiles="$(ProjectDir)..\$(CWrapperProjectName)\Build\$(ConfigurationName)\$(CWrapperProjectName).dll" DestinationFolder="$(ProjectDir)" />
+    </Target>
+    <ItemGroup>
+        <Content Include="$(CWrapperProjectName).dll" CopyToOutputDirectory="PreserveNewest" PackageCopyToOutput="true" />
+    </ItemGroup>
 </Project>
