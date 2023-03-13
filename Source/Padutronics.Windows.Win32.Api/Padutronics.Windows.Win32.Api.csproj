@@ -18,6 +18,9 @@
     <PropertyGroup>
         <NoWarn>NU5100</NoWarn>
     </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Padutronics.Interoperability" Version="0.1.0" />
+    </ItemGroup>
     <PropertyGroup>
         <CWrapperProjectName>Padutronics.Windows.Win32.Api.CWrapper</CWrapperProjectName>
     </PropertyGroup>
