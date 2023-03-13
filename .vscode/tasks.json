@@ -15,6 +15,21 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "build native",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/Source/Padutronics.Windows.Win32.Api.CWrapper"
+            },
+            "args": [
+                "--build",
+                "Build",
+                "--config",
+                "Debug"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "bump version major",
             "type": "shell",
             "command": "BumpVersion.ps1",
@@ -50,6 +65,21 @@
             "args": [
                 "-Kind",
                 "Patch"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "cmake",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/Source/Padutronics.Windows.Win32.Api.CWrapper"
+            },
+            "args": [
+                "-S",
+                ".",
+                "-B",
+                "Build"
             ],
             "problemMatcher": []
         },
