@@ -12,4 +12,10 @@ internal sealed class Structure_size_is_correct
     {
         Assert.That(Marshal.SizeOf(typeof(DXGI_RATIONAL)), Is.EqualTo(8));
     }
+
+    [Test]
+    public void Size_of_DXGI_SAMPLE_DESC()
+    {
+        Assert.That(Marshal.SizeOf(typeof(DXGI_SAMPLE_DESC)), Is.EqualTo(8));
+    }
 }
