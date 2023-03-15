@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.Dxgi;
 public interface IDXGISwapChain : IDXGIDeviceSubObject
 {
     void GetBuffer(int Buffer, Guid riid, out IntPtr ppSurface);
+    void Present(int SyncInterval, DXGI_PRESENT Flags);
 }

@@ -7,4 +7,7 @@ internal static class DXGISwapChainMethods
 {
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void IDXGISwapChain_GetBuffer(IntPtr @this, int Buffer, ref Guid riid, out IntPtr ppSurface);
+
+    [DllImport(DllNames.CWrapper, PreserveSig = false)]
+    public static extern void IDXGISwapChain_Present(IntPtr @this, int SyncInterval, DXGI_PRESENT Flags);
 }

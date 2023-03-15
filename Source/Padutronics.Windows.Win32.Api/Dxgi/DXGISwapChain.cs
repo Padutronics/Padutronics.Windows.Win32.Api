@@ -14,4 +14,9 @@ public class DXGISwapChain : DXGIDeviceSubObject, IDXGISwapChain
     {
         DXGISwapChainMethods.IDXGISwapChain_GetBuffer(This, Buffer, ref riid, out ppSurface);
     }
+
+    public void Present(int SyncInterval, DXGI_PRESENT Flags)
+    {
+        DXGISwapChainMethods.IDXGISwapChain_Present(This, SyncInterval, Flags);
+    }
 }
