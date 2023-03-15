@@ -14,6 +14,7 @@ endif()
 add_library(
     ${PROJECT_NAME} SHARED
     D3D11/ID3D11Device.cpp
+    D3D11/ID3D11DeviceContext.cpp
     Dxgi/IDXGIFactory.cpp
     Dxgi/IDXGISwapChain.cpp
     Unknwn/IUnknown.cpp
