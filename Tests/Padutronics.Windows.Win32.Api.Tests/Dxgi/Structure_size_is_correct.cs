@@ -12,4 +12,10 @@ internal sealed class Structure_size_is_correct
     {
         Assert.That(Marshal.SizeOf(typeof(DXGI_MODE_DESC)), Is.EqualTo(28));
     }
+
+    [Test]
+    public void Size_of_DXGI_SWAP_CHAIN_DESC()
+    {
+        Assert.That(Marshal.SizeOf(typeof(DXGI_SWAP_CHAIN_DESC)), Is.EqualTo(72));
+    }
 }
