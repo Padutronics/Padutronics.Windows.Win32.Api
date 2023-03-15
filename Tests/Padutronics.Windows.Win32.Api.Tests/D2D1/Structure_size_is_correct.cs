@@ -12,4 +12,10 @@ internal sealed class Structure_size_is_correct
     {
         Assert.That(Marshal.SizeOf(typeof(D2D1_FACTORY_OPTIONS)), Is.EqualTo(4));
     }
+
+    [Test]
+    public void Size_of_D2D1_RENDER_TARGET_PROPERTIES()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D2D1_RENDER_TARGET_PROPERTIES)), Is.EqualTo(28));
+    }
 }
