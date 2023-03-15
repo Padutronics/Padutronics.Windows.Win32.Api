@@ -15,4 +15,9 @@ public class D3D11DeviceContext : D3D11DeviceChild, ID3D11DeviceContext
     {
         D3D11DeviceContextMethods.ID3D11DeviceContext_OMSetRenderTargets(This, NumViews, ppRenderTargetViews?.ToArrayOfPointers(), pDepthStencilView?.Pointer ?? IntPtr.Zero);
     }
+
+    public void RSSetViewports(int NumViewports, D3D11_VIEWPORT[]? pViewports)
+    {
+        D3D11DeviceContextMethods.ID3D11DeviceContext_RSSetViewports(This, NumViewports, pViewports);
+    }
 }
