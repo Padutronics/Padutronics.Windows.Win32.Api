@@ -60,4 +60,10 @@ internal sealed class Structure_size_is_correct
     {
         Assert.That(Marshal.SizeOf(typeof(D3D11_TEX3D_RTV)), Is.EqualTo(12));
     }
+
+    [Test]
+    public void Size_of_D3D11_VIEWPORT()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D3D11_VIEWPORT)), Is.EqualTo(24));
+    }
 }
