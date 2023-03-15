@@ -9,3 +9,8 @@ auto IDXGISwapChain_Present(IDXGISwapChain& _this, UINT SyncInterval, UINT Flags
 {
     return _this.Present(SyncInterval, Flags);
 }
+
+auto IDXGISwapChain_ResizeBuffers(IDXGISwapChain& _this, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags) -> HRESULT
+{
+    return _this.ResizeBuffers(BufferCount, Width, Height, NewFormat, SwapChainFlags);
+}

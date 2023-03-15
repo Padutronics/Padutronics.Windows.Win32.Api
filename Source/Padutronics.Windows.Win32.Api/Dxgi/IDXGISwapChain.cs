@@ -1,3 +1,4 @@
+using Padutronics.Windows.Win32.Api.DxgiFormat;
 using System;
 using System.Runtime.InteropServices;
 
@@ -8,4 +9,5 @@ public interface IDXGISwapChain : IDXGIDeviceSubObject
 {
     void GetBuffer(int Buffer, Guid riid, out IntPtr ppSurface);
     void Present(int SyncInterval, DXGI_PRESENT Flags);
+    void ResizeBuffers(int BufferCount, int Width, int Height, DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags);
 }
