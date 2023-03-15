@@ -26,6 +26,12 @@ internal sealed class Structure_size_is_correct
     }
 
     [Test]
+    public void Size_of_D3D11_TEX2D_ARRAY_RTV()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D3D11_TEX2D_ARRAY_RTV)), Is.EqualTo(12));
+    }
+
+    [Test]
     public void Size_of_D3D11_TEX2D_RTV()
     {
         Assert.That(Marshal.SizeOf(typeof(D3D11_TEX2D_RTV)), Is.EqualTo(4));
