@@ -13,6 +13,7 @@ endif()
 
 add_library(
     ${PROJECT_NAME} SHARED
+    D3D11/ID3D11Device.cpp
     Dxgi/IDXGIFactory.cpp
     Dxgi/IDXGISwapChain.cpp
     Unknwn/IUnknown.cpp
