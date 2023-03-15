@@ -1,3 +1,5 @@
+using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
+using Padutronics.Windows.Win32.Api.Dxgi;
 using Padutronics.Windows.Win32.Api.Unknwn;
 using System;
 
@@ -8,5 +10,12 @@ public class D2D1Factory : Unknown, ID2D1Factory
     public D2D1Factory(IntPtr pointer) :
         base(pointer)
     {
+    }
+
+    public void CreateDxgiSurfaceRenderTarget(IDXGISurface dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES renderTargetProperties, out ID2D1RenderTarget renderTarget)
+    {
+        D2D1FactoryMethods.ID2D1Factory_CreateDxgiSurfaceRenderTarget(This, dxgiSurface.Pointer, ref renderTargetProperties, out IntPtr renderTargetPointer);
+
+        renderTarget = new D2D1RenderTarget(renderTargetPointer);
     }
 }

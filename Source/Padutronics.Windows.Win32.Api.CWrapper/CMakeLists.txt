@@ -13,6 +13,7 @@ endif()
 
 add_library(
     ${PROJECT_NAME} SHARED
+    D2D1/ID2D1Factory.cpp
     D3D11/ID3D11Device.cpp
     D3D11/ID3D11DeviceContext.cpp
     Dxgi/IDXGIFactory.cpp
