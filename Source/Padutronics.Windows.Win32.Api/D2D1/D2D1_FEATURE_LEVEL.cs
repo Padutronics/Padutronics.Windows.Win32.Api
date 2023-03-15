@@ -1,0 +1,10 @@
+using Padutronics.Windows.Win32.Api.D3DCommon;
+
+namespace Padutronics.Windows.Win32.Api.D2D1;
+
+public enum D2D1_FEATURE_LEVEL
+{
+    D2D1_FEATURE_LEVEL_DEFAULT = 0,
+    D2D1_FEATURE_LEVEL_9 = D3D_FEATURE_LEVEL.D3D_FEATURE_LEVEL_9_1,
+    D2D1_FEATURE_LEVEL_10 = D3D_FEATURE_LEVEL.D3D_FEATURE_LEVEL_10_0
+}
