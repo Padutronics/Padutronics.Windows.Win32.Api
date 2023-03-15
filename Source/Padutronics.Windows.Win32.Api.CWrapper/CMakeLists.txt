@@ -14,5 +14,6 @@ endif()
 add_library(
     ${PROJECT_NAME} SHARED
     Dxgi/IDXGIFactory.cpp
+    Dxgi/IDXGISwapChain.cpp
     Unknwn/IUnknown.cpp
 )
