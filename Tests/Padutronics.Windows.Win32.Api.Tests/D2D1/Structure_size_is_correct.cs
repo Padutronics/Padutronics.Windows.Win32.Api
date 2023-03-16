@@ -26,6 +26,12 @@ internal sealed class Structure_size_is_correct
     }
 
     [Test]
+    public void Size_of_D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES)), Is.EqualTo(24));
+    }
+
+    [Test]
     public void Size_of_D2D1_RENDER_TARGET_PROPERTIES()
     {
         Assert.That(Marshal.SizeOf(typeof(D2D1_RENDER_TARGET_PROPERTIES)), Is.EqualTo(28));
