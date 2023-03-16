@@ -8,6 +8,12 @@ namespace Padutronics.Windows.Win32.Api.Tests.DCommon;
 internal sealed class Structure_size_is_correct
 {
     [Test]
+    public void Size_of_D2D_MATRIX_3X2_F()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D2D_MATRIX_3X2_F)), Is.EqualTo(24));
+    }
+
+    [Test]
     public void Size_of_D2D_SIZE_U()
     {
         Assert.That(Marshal.SizeOf(typeof(D2D_SIZE_U)), Is.EqualTo(8));
