@@ -10,6 +10,9 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_BeginDraw(IntPtr @this);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
+    public static extern void ID2D1RenderTarget_CreateLinearGradientBrush(IntPtr @this, ref D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES linearGradientBrushProperties, IntPtr brushProperties, IntPtr gradientStopCollection, out IntPtr linearGradientBrush);
+
+    [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_CreateSolidColorBrush(IntPtr @this, ref D3DCOLORVALUE color, IntPtr brushProperties, out IntPtr solidColorBrush);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]

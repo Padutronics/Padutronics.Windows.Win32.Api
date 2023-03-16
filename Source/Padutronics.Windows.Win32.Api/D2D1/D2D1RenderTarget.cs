@@ -16,6 +16,27 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_BeginDraw(This);
     }
 
+    public void CreateLinearGradientBrush(D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES linearGradientBrushProperties, D2D1_BRUSH_PROPERTIES? brushProperties, ID2D1GradientStopCollection gradientStopCollection, out ID2D1LinearGradientBrush linearGradientBrush)
+    {
+        D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
+
+        IntPtr brushPropertiesPointer = IntPtr.Zero;
+
+        if (brushProperties.HasValue)
+        {
+            brushPropertiesCopy = brushProperties.Value;
+
+            unsafe
+            {
+                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateLinearGradientBrush(This, ref linearGradientBrushProperties, brushPropertiesPointer, gradientStopCollection.Pointer, out IntPtr linearGradientBrushPointer);
+
+        linearGradientBrush = new D2D1LinearGradientBrush(linearGradientBrushPointer);
+    }
+
     public void CreateSolidColorBrush(D3DCOLORVALUE color, D2D1_BRUSH_PROPERTIES? brushProperties, out ID2D1SolidColorBrush solidColorBrush)
     {
         D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
