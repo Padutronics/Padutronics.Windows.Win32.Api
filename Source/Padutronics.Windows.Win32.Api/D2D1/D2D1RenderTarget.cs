@@ -37,6 +37,27 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         linearGradientBrush = new D2D1LinearGradientBrush(linearGradientBrushPointer);
     }
 
+    public void CreateRadialGradientBrush(D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES radialGradientBrushProperties, D2D1_BRUSH_PROPERTIES? brushProperties, ID2D1GradientStopCollection gradientStopCollection, out ID2D1RadialGradientBrush radialGradientBrush)
+    {
+        D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
+
+        IntPtr brushPropertiesPointer = IntPtr.Zero;
+
+        if (brushProperties.HasValue)
+        {
+            brushPropertiesCopy = brushProperties.Value;
+
+            unsafe
+            {
+                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateRadialGradientBrush(This, ref radialGradientBrushProperties, brushPropertiesPointer, gradientStopCollection.Pointer, out IntPtr radialGradientBrushPointer);
+
+        radialGradientBrush = new D2D1RadialGradientBrush(radialGradientBrushPointer);
+    }
+
     public void CreateSolidColorBrush(D3DCOLORVALUE color, D2D1_BRUSH_PROPERTIES? brushProperties, out ID2D1SolidColorBrush solidColorBrush)
     {
         D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
