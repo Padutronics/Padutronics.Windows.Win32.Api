@@ -5,6 +5,11 @@ void ID2D1RenderTarget_BeginDraw(ID2D1RenderTarget& _this)
     _this.BeginDraw();
 }
 
+auto ID2D1RenderTarget_CreateBitmapBrush(ID2D1RenderTarget& _this, ID2D1Bitmap* bitmap, const D2D1_BITMAP_BRUSH_PROPERTIES* bitmapBrushProperties, const D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1BitmapBrush** bitmapBrush) -> HRESULT
+{
+    return _this.CreateBitmapBrush(bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
+}
+
 auto ID2D1RenderTarget_CreateGradientStopCollection(ID2D1RenderTarget& _this, const D2D1_GRADIENT_STOP* gradientStops, UINT32 gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, ID2D1GradientStopCollection** gradientStopCollection) -> HRESULT
 {
     return _this.CreateGradientStopCollection(gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);

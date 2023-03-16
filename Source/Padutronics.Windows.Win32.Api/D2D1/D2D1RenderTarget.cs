@@ -16,6 +16,38 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_BeginDraw(This);
     }
 
+    public void CreateBitmapBrush(ID2D1Bitmap? bitmap, D2D1_BITMAP_BRUSH_PROPERTIES? bitmapBrushProperties, D2D1_BRUSH_PROPERTIES? brushProperties, out ID2D1BitmapBrush bitmapBrush)
+    {
+        D2D1_BITMAP_BRUSH_PROPERTIES bitmapBrushPropertiesCopy;
+        D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
+
+        IntPtr bitmapBrushPropertiesPointer = IntPtr.Zero;
+        IntPtr brushPropertiesPointer = IntPtr.Zero;
+
+        if (bitmapBrushProperties.HasValue)
+        {
+            bitmapBrushPropertiesCopy = bitmapBrushProperties.Value;
+
+            unsafe
+            {
+                bitmapBrushPropertiesPointer = new IntPtr(&bitmapBrushPropertiesCopy);
+            }
+        }
+        if (brushProperties.HasValue)
+        {
+            brushPropertiesCopy = brushProperties.Value;
+
+            unsafe
+            {
+                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapBrush(This, bitmap?.Pointer ?? IntPtr.Zero, bitmapBrushPropertiesPointer, brushPropertiesPointer, out IntPtr bitmapBrushPointer);
+
+        bitmapBrush = new D2D1BitmapBrush(bitmapBrushPointer);
+    }
+
     public void CreateGradientStopCollection(D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, out ID2D1GradientStopCollection gradientStopCollection)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_CreateGradientStopCollection(This, gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, out IntPtr gradientStopCollectionPointer);
