@@ -15,4 +15,9 @@ public class D2D1SolidColorBrush : D2D1Brush, ID2D1SolidColorBrush
     {
         return D2D1SolidColorBrushMethods.ID2D1SolidColorBrush_GetColor(This);
     }
+
+    public void SetColor(D3DCOLORVALUE color)
+    {
+        D2D1SolidColorBrushMethods.ID2D1SolidColorBrush_SetColor(This, ref color);
+    }
 }

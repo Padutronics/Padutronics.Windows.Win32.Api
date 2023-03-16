@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1SolidColorBrush : ID2D1Brush
 {
     D3DCOLORVALUE GetColor();
+    void SetColor(D3DCOLORVALUE color);
 }

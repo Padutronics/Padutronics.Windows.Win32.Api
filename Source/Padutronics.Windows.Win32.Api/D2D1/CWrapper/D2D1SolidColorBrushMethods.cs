@@ -8,4 +8,7 @@ internal static class D2D1SolidColorBrushMethods
 {
     [DllImport(DllNames.CWrapper)]
     public static extern D3DCOLORVALUE ID2D1SolidColorBrush_GetColor(IntPtr @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1SolidColorBrush_SetColor(IntPtr @this, ref D3DCOLORVALUE color);
 }
