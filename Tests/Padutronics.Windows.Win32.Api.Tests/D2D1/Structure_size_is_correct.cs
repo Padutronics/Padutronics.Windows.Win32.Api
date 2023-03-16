@@ -8,6 +8,12 @@ namespace Padutronics.Windows.Win32.Api.Tests.D2D1;
 internal sealed class Structure_size_is_correct
 {
     [Test]
+    public void Size_of_D2D1_BITMAP_BRUSH_PROPERTIES()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D2D1_BITMAP_BRUSH_PROPERTIES)), Is.EqualTo(12));
+    }
+
+    [Test]
     public void Size_of_D2D1_BRUSH_PROPERTIES()
     {
         Assert.That(Marshal.SizeOf(typeof(D2D1_BRUSH_PROPERTIES)), Is.EqualTo(28));
