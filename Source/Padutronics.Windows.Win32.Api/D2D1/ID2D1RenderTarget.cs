@@ -6,4 +6,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1RenderTarget : ID2D1Resource
 {
     void BeginDraw();
+    void EndDraw(out long tag1, out long tag2);
 }

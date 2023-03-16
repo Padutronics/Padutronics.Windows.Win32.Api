@@ -14,4 +14,9 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_BeginDraw(This);
     }
+
+    public void EndDraw(out long tag1, out long tag2)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_EndDraw(This, out tag1, out tag2);
+    }
 }
