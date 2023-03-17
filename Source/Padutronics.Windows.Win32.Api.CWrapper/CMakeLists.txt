@@ -15,6 +15,7 @@ add_library(
     ${PROJECT_NAME} SHARED
     D2D1/ID2D1Bitmap.cpp
     D2D1/ID2D1Factory.cpp
+    D2D1/ID2D1Geometry.cpp
     D2D1/ID2D1PathGeometry.cpp
     D2D1/ID2D1RenderTarget.cpp
     D2D1/ID2D1SimplifiedGeometrySink.cpp
