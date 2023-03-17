@@ -4,3 +4,8 @@ auto IWICImagingFactory_CreateDecoderFromStream(IWICImagingFactory& _this, IStre
 {
     return _this.CreateDecoderFromStream(pIStream, pguidVendor, metadataOptions, ppIDecoder);
 }
+
+auto IWICImagingFactory_CreateFormatConverter(IWICImagingFactory& _this, IWICFormatConverter** ppIFormatConverter) -> HRESULT
+{
+    return _this.CreateFormatConverter(ppIFormatConverter);
+}

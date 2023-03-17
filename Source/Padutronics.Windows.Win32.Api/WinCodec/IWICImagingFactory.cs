@@ -9,4 +9,5 @@ namespace Padutronics.Windows.Win32.Api.WinCodec;
 public interface IWICImagingFactory : IUnknown
 {
     void CreateDecoderFromStream(IStream pIStream, Guid? pguidVendor, WICDecodeOptions metadataOptions, out IWICBitmapDecoder ppIDecoder);
+    void CreateFormatConverter(out IWICFormatConverter ppIFormatConverter);
 }

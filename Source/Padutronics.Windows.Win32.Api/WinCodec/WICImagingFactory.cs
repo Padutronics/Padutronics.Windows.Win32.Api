@@ -32,4 +32,11 @@ public class WICImagingFactory : Unknown, IWICImagingFactory
 
         ppIDecoder = new WICBitmapDecoder(ppIDecoderPointer);
     }
+
+    public void CreateFormatConverter(out IWICFormatConverter ppIFormatConverter)
+    {
+        WICImagingFactoryMethods.IWICImagingFactory_CreateFormatConverter(This, out IntPtr ppIFormatConverterPointer);
+
+        ppIFormatConverter = new WICFormatConverter(ppIFormatConverterPointer);
+    }
 }
