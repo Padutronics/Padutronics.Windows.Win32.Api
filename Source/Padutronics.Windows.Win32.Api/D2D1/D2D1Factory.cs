@@ -19,6 +19,13 @@ public class D2D1Factory : Unknown, ID2D1Factory
         renderTarget = new D2D1RenderTarget(renderTargetPointer);
     }
 
+    public void CreateEllipseGeometry(D2D1_ELLIPSE ellipse, out ID2D1EllipseGeometry ellipseGeometry)
+    {
+        D2D1FactoryMethods.ID2D1Factory_CreateEllipseGeometry(This, ref ellipse, out IntPtr ellipseGeometryPointer);
+
+        ellipseGeometry = new D2D1EllipseGeometry(ellipseGeometryPointer);
+    }
+
     public void CreatePathGeometry(out ID2D1PathGeometry pathGeometry)
     {
         D2D1FactoryMethods.ID2D1Factory_CreatePathGeometry(This, out IntPtr pathGeometryPointer);

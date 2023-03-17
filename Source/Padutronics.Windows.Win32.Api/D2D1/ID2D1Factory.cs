@@ -8,6 +8,7 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1Factory : IUnknown
 {
     void CreateDxgiSurfaceRenderTarget(IDXGISurface dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES renderTargetProperties, out ID2D1RenderTarget renderTarget);
+    void CreateEllipseGeometry(D2D1_ELLIPSE ellipse, out ID2D1EllipseGeometry ellipseGeometry);
     void CreatePathGeometry(out ID2D1PathGeometry pathGeometry);
     void CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES strokeStyleProperties, float[]? dashes, int dashesCount, out ID2D1StrokeStyle strokeStyle);
 }

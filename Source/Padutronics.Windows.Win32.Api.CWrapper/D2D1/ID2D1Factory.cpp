@@ -5,6 +5,11 @@ auto ID2D1Factory_CreateDxgiSurfaceRenderTarget(ID2D1Factory& _this, IDXGISurfac
     return _this.CreateDxgiSurfaceRenderTarget(dxgiSurface, renderTargetProperties, renderTarget);
 }
 
+auto ID2D1Factory_CreateEllipseGeometry(ID2D1Factory& _this, const D2D1_ELLIPSE* ellipse, ID2D1EllipseGeometry** ellipseGeometry) -> HRESULT
+{
+    return _this.CreateEllipseGeometry(ellipse, ellipseGeometry);
+}
+
 auto ID2D1Factory_CreatePathGeometry(ID2D1Factory& _this, ID2D1PathGeometry** pathGeometry) -> HRESULT
 {
     return _this.CreatePathGeometry(pathGeometry);

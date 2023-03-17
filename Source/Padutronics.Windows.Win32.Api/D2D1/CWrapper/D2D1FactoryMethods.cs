@@ -9,6 +9,9 @@ internal static class D2D1FactoryMethods
     public static extern void ID2D1Factory_CreateDxgiSurfaceRenderTarget(IntPtr @this, IntPtr dxgiSurface, ref D2D1_RENDER_TARGET_PROPERTIES renderTargetProperties, out IntPtr renderTarget);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
+    public static extern void ID2D1Factory_CreateEllipseGeometry(IntPtr @this, ref D2D1_ELLIPSE ellipse, out IntPtr ellipseGeometry);
+
+    [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1Factory_CreatePathGeometry(IntPtr @this, out IntPtr pathGeometry);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
