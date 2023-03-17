@@ -1,4 +1,5 @@
 using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
+using Padutronics.Windows.Win32.Api.DCommon;
 using Padutronics.Windows.Win32.Api.Dxgi;
 using Padutronics.Windows.Win32.Api.Unknwn;
 using System;
@@ -31,6 +32,13 @@ public class D2D1Factory : Unknown, ID2D1Factory
         D2D1FactoryMethods.ID2D1Factory_CreatePathGeometry(This, out IntPtr pathGeometryPointer);
 
         pathGeometry = new D2D1PathGeometry(pathGeometryPointer);
+    }
+
+    public void CreateRectangleGeometry(D2D_RECT_F rectangle, out ID2D1RectangleGeometry rectangleGeometry)
+    {
+        D2D1FactoryMethods.ID2D1Factory_CreateRectangleGeometry(This, ref rectangle, out IntPtr rectangleGeometryPointer);
+
+        rectangleGeometry = new D2D1RectangleGeometry(rectangleGeometryPointer);
     }
 
     public void CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES strokeStyleProperties, float[]? dashes, int dashesCount, out ID2D1StrokeStyle strokeStyle)

@@ -15,6 +15,11 @@ auto ID2D1Factory_CreatePathGeometry(ID2D1Factory& _this, ID2D1PathGeometry** pa
     return _this.CreatePathGeometry(pathGeometry);
 }
 
+auto ID2D1Factory_CreateRectangleGeometry(ID2D1Factory& _this, const D2D1_RECT_F* rectangle, ID2D1RectangleGeometry** rectangleGeometry) -> HRESULT
+{
+    return _this.CreateRectangleGeometry(rectangle, rectangleGeometry);
+}
+
 auto ID2D1Factory_CreateStrokeStyle(ID2D1Factory& _this, const D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, const FLOAT* dashes, UINT32 dashesCount, ID2D1StrokeStyle** strokeStyle) -> HRESULT
 {
     return _this.CreateStrokeStyle(strokeStyleProperties, dashes, dashesCount, strokeStyle);
