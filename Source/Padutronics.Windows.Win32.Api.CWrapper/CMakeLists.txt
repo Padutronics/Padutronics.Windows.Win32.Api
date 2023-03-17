@@ -22,4 +22,5 @@ add_library(
     Dxgi/IDXGIFactory.cpp
     Dxgi/IDXGISwapChain.cpp
     Unknwn/IUnknown.cpp
+    WinCodec/IWICImagingFactory.cpp
 )
