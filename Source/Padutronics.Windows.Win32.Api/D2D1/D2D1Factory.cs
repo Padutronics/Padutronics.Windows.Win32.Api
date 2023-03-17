@@ -19,6 +19,13 @@ public class D2D1Factory : Unknown, ID2D1Factory
         renderTarget = new D2D1RenderTarget(renderTargetPointer);
     }
 
+    public void CreatePathGeometry(out ID2D1PathGeometry pathGeometry)
+    {
+        D2D1FactoryMethods.ID2D1Factory_CreatePathGeometry(This, out IntPtr pathGeometryPointer);
+
+        pathGeometry = new D2D1PathGeometry(pathGeometryPointer);
+    }
+
     public void CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES strokeStyleProperties, float[]? dashes, int dashesCount, out ID2D1StrokeStyle strokeStyle)
     {
         D2D1FactoryMethods.ID2D1Factory_CreateStrokeStyle(This, ref strokeStyleProperties, dashes, dashesCount, out IntPtr strokeStylePointer);
