@@ -4,3 +4,8 @@ auto ID2D1Factory_CreateDxgiSurfaceRenderTarget(ID2D1Factory& _this, IDXGISurfac
 {
     return _this.CreateDxgiSurfaceRenderTarget(dxgiSurface, renderTargetProperties, renderTarget);
 }
+
+auto ID2D1Factory_CreateStrokeStyle(ID2D1Factory& _this, const D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, const FLOAT* dashes, UINT32 dashesCount, ID2D1StrokeStyle** strokeStyle) -> HRESULT
+{
+    return _this.CreateStrokeStyle(strokeStyleProperties, dashes, dashesCount, strokeStyle);
+}
