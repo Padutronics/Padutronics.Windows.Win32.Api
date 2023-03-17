@@ -26,6 +26,12 @@ internal sealed class Structure_size_is_correct
     }
 
     [Test]
+    public void Size_of_D2D1_ELLIPSE()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D2D1_ELLIPSE)), Is.EqualTo(16));
+    }
+
+    [Test]
     public void Size_of_D2D1_FACTORY_OPTIONS()
     {
         Assert.That(Marshal.SizeOf(typeof(D2D1_FACTORY_OPTIONS)), Is.EqualTo(4));
