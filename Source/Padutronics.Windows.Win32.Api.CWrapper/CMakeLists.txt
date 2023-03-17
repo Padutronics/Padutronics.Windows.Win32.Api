@@ -19,6 +19,7 @@ add_library(
     D2D1/ID2D1SolidColorBrush.cpp
     D3D11/ID3D11Device.cpp
     D3D11/ID3D11DeviceContext.cpp
+    DWrite/IDWriteFactory.cpp
     Dxgi/IDXGIFactory.cpp
     Dxgi/IDXGISwapChain.cpp
     Unknwn/IUnknown.cpp
