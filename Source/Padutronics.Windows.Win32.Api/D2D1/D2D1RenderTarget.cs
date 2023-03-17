@@ -1,5 +1,6 @@
 using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
 using Padutronics.Windows.Win32.Api.DxgiType;
+using Padutronics.Windows.Win32.Api.WinCodec;
 using System;
 
 namespace Padutronics.Windows.Win32.Api.D2D1;
@@ -46,6 +47,27 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapBrush(This, bitmap?.Pointer ?? IntPtr.Zero, bitmapBrushPropertiesPointer, brushPropertiesPointer, out IntPtr bitmapBrushPointer);
 
         bitmapBrush = new D2D1BitmapBrush(bitmapBrushPointer);
+    }
+
+    public void CreateBitmapFromWicBitmap(IWICBitmapSource wicBitmapSource, D2D1_BITMAP_PROPERTIES? bitmapProperties, out ID2D1Bitmap bitmap)
+    {
+        D2D1_BITMAP_PROPERTIES bitmapPropertiesCopy;
+
+        IntPtr bitmapPropertiesPointer = IntPtr.Zero;
+
+        if (bitmapProperties.HasValue)
+        {
+            bitmapPropertiesCopy = bitmapProperties.Value;
+
+            unsafe
+            {
+                bitmapPropertiesPointer = new IntPtr(&bitmapPropertiesCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapFromWicBitmap(This, wicBitmapSource.Pointer, bitmapPropertiesPointer, out IntPtr bitmapPointer);
+
+        bitmap = new D2D1Bitmap(bitmapPointer);
     }
 
     public void CreateGradientStopCollection(D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, out ID2D1GradientStopCollection gradientStopCollection)

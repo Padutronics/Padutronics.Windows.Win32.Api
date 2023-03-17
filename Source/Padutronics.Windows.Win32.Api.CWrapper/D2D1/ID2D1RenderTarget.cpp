@@ -10,6 +10,11 @@ auto ID2D1RenderTarget_CreateBitmapBrush(ID2D1RenderTarget& _this, ID2D1Bitmap* 
     return _this.CreateBitmapBrush(bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
 }
 
+auto ID2D1RenderTarget_CreateBitmapFromWicBitmap(ID2D1RenderTarget& _this, IWICBitmapSource* wicBitmapSource, const D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap) -> HRESULT
+{
+    return _this.CreateBitmapFromWicBitmap(wicBitmapSource, bitmapProperties, bitmap);
+}
+
 auto ID2D1RenderTarget_CreateGradientStopCollection(ID2D1RenderTarget& _this, const D2D1_GRADIENT_STOP* gradientStops, UINT32 gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, ID2D1GradientStopCollection** gradientStopCollection) -> HRESULT
 {
     return _this.CreateGradientStopCollection(gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);

@@ -13,6 +13,9 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_CreateBitmapBrush(IntPtr @this, IntPtr bitmap, IntPtr bitmapBrushProperties, IntPtr brushProperties, out IntPtr bitmapBrush);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
+    public static extern void ID2D1RenderTarget_CreateBitmapFromWicBitmap(IntPtr @this, IntPtr wicBitmapSource, IntPtr bitmapProperties, out IntPtr bitmap);
+
+    [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_CreateGradientStopCollection(IntPtr @this, D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, out IntPtr gradientStopCollection);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
