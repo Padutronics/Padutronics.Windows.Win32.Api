@@ -17,4 +17,5 @@ EXPORT void ID2D1RenderTarget_DrawGeometry(ID2D1RenderTarget& _this, ID2D1Geomet
 EXPORT void ID2D1RenderTarget_DrawLine(ID2D1RenderTarget& _this, D2D1_POINT_2F point0, D2D1_POINT_2F point1, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle);
 EXPORT void ID2D1RenderTarget_DrawRectangle(ID2D1RenderTarget& _this, const D2D1_RECT_F* rect, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle);
 EXPORT void ID2D1RenderTarget_DrawRoundedRectangle(ID2D1RenderTarget& _this, const D2D1_ROUNDED_RECT* roundedRect, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle);
+EXPORT void ID2D1RenderTarget_DrawText(ID2D1RenderTarget& _this, const WCHAR* string, UINT32 stringLength, IDWriteTextFormat* textFormat, const D2D1_RECT_F* layoutRect, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode);
 EXPORT auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TAG* tag2) -> HRESULT;

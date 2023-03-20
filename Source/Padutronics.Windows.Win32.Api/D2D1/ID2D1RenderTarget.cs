@@ -1,4 +1,5 @@
 using Padutronics.Windows.Win32.Api.DCommon;
+using Padutronics.Windows.Win32.Api.DWrite;
 using Padutronics.Windows.Win32.Api.DxgiType;
 using Padutronics.Windows.Win32.Api.WinCodec;
 using System.Runtime.InteropServices;
@@ -21,5 +22,6 @@ public interface ID2D1RenderTarget : ID2D1Resource
     void DrawLine(D2D_POINT_2F point0, D2D_POINT_2F point1, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle);
     void DrawRectangle(D2D_RECT_F rect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle);
     void DrawRoundedRectangle(D2D1_ROUNDED_RECT roundedRect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle);
+    void DrawText(string @string, int stringLength, IDWriteTextFormat textFormat, D2D_RECT_F layoutRect, ID2D1Brush defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode);
     void EndDraw(out long tag1, out long tag2);
 }

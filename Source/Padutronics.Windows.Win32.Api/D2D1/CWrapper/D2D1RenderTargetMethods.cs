@@ -46,6 +46,9 @@ internal static class D2D1RenderTargetMethods
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_DrawRoundedRectangle(IntPtr @this, ref D2D1_ROUNDED_RECT roundedRect, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
 
+    [DllImport(DllNames.CWrapper, CharSet = CharSet.Unicode)]
+    public static extern void ID2D1RenderTarget_DrawText(IntPtr @this, string @string, int stringLength, IntPtr textFormat, ref D2D_RECT_F layoutRect, IntPtr defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode);
+
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_EndDraw(IntPtr @this, out long tag1, out long tag2);
 }

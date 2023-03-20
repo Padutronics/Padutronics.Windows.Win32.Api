@@ -65,6 +65,11 @@ void ID2D1RenderTarget_DrawRoundedRectangle(ID2D1RenderTarget& _this, const D2D1
     _this.DrawRoundedRectangle(roundedRect, brush, strokeWidth, strokeStyle);
 }
 
+void ID2D1RenderTarget_DrawText(ID2D1RenderTarget& _this, const WCHAR* string, UINT32 stringLength, IDWriteTextFormat* textFormat, const D2D1_RECT_F* layoutRect, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode)
+{
+    _this.DrawText(string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+}
+
 auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TAG* tag2) -> HRESULT
 {
     return _this.EndDraw(tag1, tag2);

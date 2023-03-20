@@ -1,5 +1,6 @@
 using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
 using Padutronics.Windows.Win32.Api.DCommon;
+using Padutronics.Windows.Win32.Api.DWrite;
 using Padutronics.Windows.Win32.Api.DxgiType;
 using Padutronics.Windows.Win32.Api.WinCodec;
 using System;
@@ -185,6 +186,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     public void DrawRoundedRectangle(D2D1_ROUNDED_RECT roundedRect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRoundedRectangle(This, ref roundedRect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+    }
+
+    public void DrawText(string @string, int stringLength, IDWriteTextFormat textFormat, D2D_RECT_F layoutRect, ID2D1Brush defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawText(This, @string, stringLength, textFormat.Pointer, ref layoutRect, defaultFillBrush.Pointer, options, measuringMode);
     }
 
     public void EndDraw(out long tag1, out long tag2)
