@@ -1,3 +1,4 @@
+using Padutronics.Windows.Win32.Api.DCommon;
 using Padutronics.Windows.Win32.Api.DxgiType;
 using System;
 using System.Runtime.InteropServices;
@@ -35,6 +36,9 @@ internal static class D2D1RenderTargetMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_DrawGeometry(IntPtr @this, IntPtr geometry, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_DrawLine(IntPtr @this, D2D_POINT_2F point0, D2D_POINT_2F point1, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_EndDraw(IntPtr @this, out long tag1, out long tag2);
