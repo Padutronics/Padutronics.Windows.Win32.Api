@@ -62,6 +62,12 @@ internal sealed class Structure_size_is_correct
     }
 
     [Test]
+    public void Size_of_D2D1_ROUNDED_RECT()
+    {
+        Assert.That(Marshal.SizeOf(typeof(D2D1_ROUNDED_RECT)), Is.EqualTo(24));
+    }
+
+    [Test]
     public void Size_of_D2D1_STROKE_STYLE_PROPERTIES()
     {
         Assert.That(Marshal.SizeOf(typeof(D2D1_STROKE_STYLE_PROPERTIES)), Is.EqualTo(28));
