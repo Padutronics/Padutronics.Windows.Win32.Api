@@ -60,6 +60,11 @@ void ID2D1RenderTarget_DrawRectangle(ID2D1RenderTarget& _this, const D2D1_RECT_F
     _this.DrawRectangle(rect, brush, strokeWidth, strokeStyle);
 }
 
+void ID2D1RenderTarget_DrawRoundedRectangle(ID2D1RenderTarget& _this, const D2D1_ROUNDED_RECT* roundedRect, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle)
+{
+    _this.DrawRoundedRectangle(roundedRect, brush, strokeWidth, strokeStyle);
+}
+
 auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TAG* tag2) -> HRESULT
 {
     return _this.EndDraw(tag1, tag2);

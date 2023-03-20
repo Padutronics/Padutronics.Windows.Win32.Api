@@ -182,6 +182,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRectangle(This, ref rect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
     }
 
+    public void DrawRoundedRectangle(D2D1_ROUNDED_RECT roundedRect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRoundedRectangle(This, ref roundedRect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+    }
+
     public void EndDraw(out long tag1, out long tag2)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_EndDraw(This, out tag1, out tag2);
