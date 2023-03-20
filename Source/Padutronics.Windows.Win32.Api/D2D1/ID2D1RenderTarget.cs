@@ -35,5 +35,6 @@ public interface ID2D1RenderTarget : ID2D1Resource
     void PopAxisAlignedClip();
     void PopLayer();
     void PushAxisAlignedClip(D2D_RECT_F clipRect, D2D1_ANTIALIAS_MODE antialiasMode);
+    void PushLayer(D2D1_LAYER_PARAMETERS layerParameters, ID2D1Layer? layer);
     void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 }

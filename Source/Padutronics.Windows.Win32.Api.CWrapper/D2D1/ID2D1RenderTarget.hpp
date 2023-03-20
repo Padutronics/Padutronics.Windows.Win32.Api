@@ -30,4 +30,5 @@ EXPORT void ID2D1RenderTarget_GetTransform(ID2D1RenderTarget& _this, D2D1_MATRIX
 EXPORT void ID2D1RenderTarget_PopAxisAlignedClip(ID2D1RenderTarget& _this);
 EXPORT void ID2D1RenderTarget_PopLayer(ID2D1RenderTarget& _this);
 EXPORT void ID2D1RenderTarget_PushAxisAlignedClip(ID2D1RenderTarget& _this, const D2D1_RECT_F* clipRect, D2D1_ANTIALIAS_MODE antialiasMode);
+EXPORT void ID2D1RenderTarget_PushLayer(ID2D1RenderTarget& _this, const D2D1_LAYER_PARAMETERS* layerParameters, ID2D1Layer* layer);
 EXPORT void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode);

@@ -130,6 +130,11 @@ void ID2D1RenderTarget_PushAxisAlignedClip(ID2D1RenderTarget& _this, const D2D1_
     _this.PushAxisAlignedClip(clipRect, antialiasMode);
 }
 
+void ID2D1RenderTarget_PushLayer(ID2D1RenderTarget& _this, const D2D1_LAYER_PARAMETERS* layerParameters, ID2D1Layer* layer)
+{
+    _this.PushLayer(layerParameters, layer);
+}
+
 void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode)
 {
     _this.SetAntialiasMode(antialiasMode);

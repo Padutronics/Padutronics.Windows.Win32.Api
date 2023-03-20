@@ -86,5 +86,8 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_PushAxisAlignedClip(IntPtr @this, ref D2D_RECT_F clipRect, D2D1_ANTIALIAS_MODE antialiasMode);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_PushLayer(IntPtr @this, ref D2D1_LAYER_PARAMETERS layerParameters, IntPtr layer);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_SetAntialiasMode(IntPtr @this, D2D1_ANTIALIAS_MODE antialiasMode);
 }

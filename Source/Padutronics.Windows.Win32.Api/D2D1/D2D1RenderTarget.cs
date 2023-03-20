@@ -303,6 +303,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_PushAxisAlignedClip(This, ref clipRect, antialiasMode);
     }
 
+    public void PushLayer(D2D1_LAYER_PARAMETERS layerParameters, ID2D1Layer? layer)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_PushLayer(This, ref layerParameters, layer?.Pointer ?? IntPtr.Zero);
+    }
+
     public void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_SetAntialiasMode(This, antialiasMode);
