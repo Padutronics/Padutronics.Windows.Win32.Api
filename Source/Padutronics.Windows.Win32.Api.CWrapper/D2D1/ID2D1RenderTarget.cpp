@@ -95,6 +95,11 @@ void ID2D1RenderTarget_FillOpacityMask(ID2D1RenderTarget& _this, ID2D1Bitmap* op
     _this.FillOpacityMask(opacityMask, brush, content, destinationRectangle, sourceRectangle);
 }
 
+void ID2D1RenderTarget_FillRectangle(ID2D1RenderTarget& _this, const D2D1_RECT_F* rect, ID2D1Brush* brush)
+{
+    _this.FillRectangle(rect, brush);
+}
+
 auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE
 {
     return _this.GetAntialiasMode();

@@ -268,6 +268,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_FillOpacityMask(This, opacityMask.Pointer, brush.Pointer, content, destinationRectanglePointer, sourceRectanglePointer);
     }
 
+    public void FillRectangle(D2D_RECT_F rect, ID2D1Brush brush)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_FillRectangle(This, ref rect, brush.Pointer);
+    }
+
     public D2D1_ANTIALIAS_MODE GetAntialiasMode()
     {
         return D2D1RenderTargetMethods.ID2D1RenderTarget_GetAntialiasMode(This);
