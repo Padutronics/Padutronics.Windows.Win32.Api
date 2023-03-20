@@ -89,3 +89,8 @@ void ID2D1RenderTarget_FillGeometry(ID2D1RenderTarget& _this, ID2D1Geometry* geo
 {
     _this.FillGeometry(geometry, brush, opacityBrush);
 }
+
+auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE
+{
+    return _this.GetAntialiasMode();
+}

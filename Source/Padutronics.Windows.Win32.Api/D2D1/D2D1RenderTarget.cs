@@ -237,4 +237,9 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_FillGeometry(This, geometry.Pointer, brush.Pointer, opacityBrush?.Pointer ?? IntPtr.Zero);
     }
+
+    public D2D1_ANTIALIAS_MODE GetAntialiasMode()
+    {
+        return D2D1RenderTargetMethods.ID2D1RenderTarget_GetAntialiasMode(This);
+    }
 }
