@@ -1,4 +1,5 @@
 using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
+using Padutronics.Windows.Win32.Api.DCommon;
 using Padutronics.Windows.Win32.Api.DxgiType;
 using Padutronics.Windows.Win32.Api.WinCodec;
 using System;
@@ -75,6 +76,27 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_CreateGradientStopCollection(This, gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, out IntPtr gradientStopCollectionPointer);
 
         gradientStopCollection = new D2D1GradientStopCollection(gradientStopCollectionPointer);
+    }
+
+    public void CreateLayer(D2D_SIZE_F? size, out ID2D1Layer layer)
+    {
+        D2D_SIZE_F sizeCopy;
+
+        IntPtr sizePointer = IntPtr.Zero;
+
+        if (size.HasValue)
+        {
+            sizeCopy = size.Value;
+
+            unsafe
+            {
+                sizePointer = new IntPtr(&sizeCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateLayer(This, sizePointer, out IntPtr layerPointer);
+
+        layer = new D2D1Layer(layerPointer);
     }
 
     public void CreateLinearGradientBrush(D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES linearGradientBrushProperties, D2D1_BRUSH_PROPERTIES? brushProperties, ID2D1GradientStopCollection gradientStopCollection, out ID2D1LinearGradientBrush linearGradientBrush)

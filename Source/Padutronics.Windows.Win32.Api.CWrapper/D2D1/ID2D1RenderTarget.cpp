@@ -20,6 +20,11 @@ auto ID2D1RenderTarget_CreateGradientStopCollection(ID2D1RenderTarget& _this, co
     return _this.CreateGradientStopCollection(gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);
 }
 
+auto ID2D1RenderTarget_CreateLayer(ID2D1RenderTarget& _this, const D2D1_SIZE_F* size, ID2D1Layer** layer) -> HRESULT
+{
+    return _this.CreateLayer(size, layer);
+}
+
 auto ID2D1RenderTarget_CreateLinearGradientBrush(ID2D1RenderTarget& _this, const D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES* linearGradientBrushProperties, const D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush) -> HRESULT
 {
     return _this.CreateLinearGradientBrush(linearGradientBrushProperties, brushProperties, gradientStopCollection, linearGradientBrush);
