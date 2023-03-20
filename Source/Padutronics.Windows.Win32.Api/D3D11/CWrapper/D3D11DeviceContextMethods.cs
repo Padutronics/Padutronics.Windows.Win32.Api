@@ -6,6 +6,9 @@ namespace Padutronics.Windows.Win32.Api.D3D11.CWrapper;
 internal static class D3D11DeviceContextMethods
 {
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID3D11DeviceContext_ClearRenderTargetView(IntPtr @this, IntPtr pRenderTargetView, [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[] ColorRGBA);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern void ID3D11DeviceContext_OMSetRenderTargets(IntPtr @this, int NumViews, IntPtr[]? ppRenderTargetViews, IntPtr pDepthStencilView);
 
     [DllImport(DllNames.CWrapper)]

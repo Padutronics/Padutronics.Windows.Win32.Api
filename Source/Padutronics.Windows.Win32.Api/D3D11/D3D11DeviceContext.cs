@@ -11,6 +11,11 @@ public class D3D11DeviceContext : D3D11DeviceChild, ID3D11DeviceContext
     {
     }
 
+    public void ClearRenderTargetView(ID3D11RenderTargetView pRenderTargetView, float[] ColorRGBA)
+    {
+        D3D11DeviceContextMethods.ID3D11DeviceContext_ClearRenderTargetView(This, pRenderTargetView.Pointer, ColorRGBA);
+    }
+
     public void OMSetRenderTargets(int NumViews, ID3D11RenderTargetView[]? ppRenderTargetViews, ID3D11DepthStencilView? pDepthStencilView)
     {
         D3D11DeviceContextMethods.ID3D11DeviceContext_OMSetRenderTargets(This, NumViews, ppRenderTargetViews?.ToArrayOfPointers(), pDepthStencilView?.Pointer ?? IntPtr.Zero);
