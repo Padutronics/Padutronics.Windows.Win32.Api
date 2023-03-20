@@ -227,4 +227,9 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_EndDraw(This, out tag1, out tag2);
     }
+
+    public void FillEllipse(D2D1_ELLIPSE ellipse, ID2D1Brush brush)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_FillEllipse(This, ref ellipse, brush.Pointer);
+    }
 }

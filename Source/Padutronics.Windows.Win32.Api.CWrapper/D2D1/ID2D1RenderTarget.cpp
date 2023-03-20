@@ -79,3 +79,8 @@ auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TA
 {
     return _this.EndDraw(tag1, tag2);
 }
+
+void ID2D1RenderTarget_FillEllipse(ID2D1RenderTarget& _this, const D2D1_ELLIPSE* ellipse, ID2D1Brush* brush)
+{
+    _this.FillEllipse(ellipse, brush);
+}

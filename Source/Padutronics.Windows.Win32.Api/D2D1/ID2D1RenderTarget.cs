@@ -25,4 +25,5 @@ public interface ID2D1RenderTarget : ID2D1Resource
     void DrawRoundedRectangle(D2D1_ROUNDED_RECT roundedRect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle);
     void DrawText(string @string, int stringLength, IDWriteTextFormat textFormat, D2D_RECT_F layoutRect, ID2D1Brush defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode);
     void EndDraw(out long tag1, out long tag2);
+    void FillEllipse(D2D1_ELLIPSE ellipse, ID2D1Brush brush);
 }
