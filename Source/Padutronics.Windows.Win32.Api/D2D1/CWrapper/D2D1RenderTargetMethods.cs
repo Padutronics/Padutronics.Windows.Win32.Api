@@ -62,6 +62,9 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_FillGeometry(IntPtr @this, IntPtr geometry, IntPtr brush, IntPtr opacityBrush);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_FillOpacityMask(IntPtr @this, IntPtr opacityMask, IntPtr brush, D2D1_OPACITY_MASK_CONTENT content, IntPtr destinationRectangle, IntPtr sourceRectangle);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern D2D1_ANTIALIAS_MODE ID2D1RenderTarget_GetAntialiasMode(IntPtr @this);
 
     [DllImport(DllNames.CWrapper)]

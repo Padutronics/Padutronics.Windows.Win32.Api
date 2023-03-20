@@ -238,6 +238,36 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_FillGeometry(This, geometry.Pointer, brush.Pointer, opacityBrush?.Pointer ?? IntPtr.Zero);
     }
 
+    public void FillOpacityMask(ID2D1Bitmap opacityMask, ID2D1Brush brush, D2D1_OPACITY_MASK_CONTENT content, D2D_RECT_F? destinationRectangle, D2D_RECT_F? sourceRectangle)
+    {
+        D2D_RECT_F destinationRectangleCopy;
+        D2D_RECT_F sourceRectangleCopy;
+
+        IntPtr destinationRectanglePointer = IntPtr.Zero;
+        IntPtr sourceRectanglePointer = IntPtr.Zero;
+
+        if (destinationRectangle.HasValue)
+        {
+            destinationRectangleCopy = destinationRectangle.Value;
+
+            unsafe
+            {
+                destinationRectanglePointer = new IntPtr(&destinationRectangleCopy);
+            }
+        }
+        if (sourceRectangle.HasValue)
+        {
+            sourceRectangleCopy = sourceRectangle.Value;
+
+            unsafe
+            {
+                sourceRectanglePointer = new IntPtr(&sourceRectangleCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_FillOpacityMask(This, opacityMask.Pointer, brush.Pointer, content, destinationRectanglePointer, sourceRectanglePointer);
+    }
+
     public D2D1_ANTIALIAS_MODE GetAntialiasMode()
     {
         return D2D1RenderTargetMethods.ID2D1RenderTarget_GetAntialiasMode(This);

@@ -90,6 +90,11 @@ void ID2D1RenderTarget_FillGeometry(ID2D1RenderTarget& _this, ID2D1Geometry* geo
     _this.FillGeometry(geometry, brush, opacityBrush);
 }
 
+void ID2D1RenderTarget_FillOpacityMask(ID2D1RenderTarget& _this, ID2D1Bitmap* opacityMask, ID2D1Brush* brush, D2D1_OPACITY_MASK_CONTENT content, const D2D1_RECT_F* destinationRectangle, const D2D1_RECT_F* sourceRectangle)
+{
+    _this.FillOpacityMask(opacityMask, brush, content, destinationRectangle, sourceRectangle);
+}
+
 auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE
 {
     return _this.GetAntialiasMode();
