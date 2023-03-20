@@ -84,3 +84,8 @@ void ID2D1RenderTarget_FillEllipse(ID2D1RenderTarget& _this, const D2D1_ELLIPSE*
 {
     _this.FillEllipse(ellipse, brush);
 }
+
+void ID2D1RenderTarget_FillGeometry(ID2D1RenderTarget& _this, ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush)
+{
+    _this.FillGeometry(geometry, brush, opacityBrush);
+}

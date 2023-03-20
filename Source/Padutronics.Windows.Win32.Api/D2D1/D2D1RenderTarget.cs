@@ -232,4 +232,9 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_FillEllipse(This, ref ellipse, brush.Pointer);
     }
+
+    public void FillGeometry(ID2D1Geometry geometry, ID2D1Brush brush, ID2D1Brush? opacityBrush)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_FillGeometry(This, geometry.Pointer, brush.Pointer, opacityBrush?.Pointer ?? IntPtr.Zero);
+    }
 }

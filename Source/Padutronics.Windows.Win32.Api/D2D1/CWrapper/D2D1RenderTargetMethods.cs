@@ -57,4 +57,7 @@ internal static class D2D1RenderTargetMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_FillEllipse(IntPtr @this, ref D2D1_ELLIPSE ellipse, IntPtr brush);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_FillGeometry(IntPtr @this, IntPtr geometry, IntPtr brush, IntPtr opacityBrush);
 }

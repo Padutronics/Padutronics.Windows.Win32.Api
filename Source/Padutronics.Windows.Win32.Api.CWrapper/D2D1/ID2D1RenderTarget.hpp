@@ -21,3 +21,4 @@ EXPORT void ID2D1RenderTarget_DrawRoundedRectangle(ID2D1RenderTarget& _this, con
 EXPORT void ID2D1RenderTarget_DrawText(ID2D1RenderTarget& _this, const WCHAR* string, UINT32 stringLength, IDWriteTextFormat* textFormat, const D2D1_RECT_F* layoutRect, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode);
 EXPORT auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TAG* tag2) -> HRESULT;
 EXPORT void ID2D1RenderTarget_FillEllipse(ID2D1RenderTarget& _this, const D2D1_ELLIPSE* ellipse, ID2D1Brush* brush);
+EXPORT void ID2D1RenderTarget_FillGeometry(ID2D1RenderTarget& _this, ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush);
