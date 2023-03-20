@@ -312,4 +312,9 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_SetAntialiasMode(This, antialiasMode);
     }
+
+    public void SetTransform(D2D_MATRIX_3X2_F transform)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_SetTransform(This, ref transform);
+    }
 }

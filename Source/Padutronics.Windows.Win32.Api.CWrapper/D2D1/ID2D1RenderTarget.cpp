@@ -139,3 +139,8 @@ void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS
 {
     _this.SetAntialiasMode(antialiasMode);
 }
+
+void ID2D1RenderTarget_SetTransform(ID2D1RenderTarget& _this, const D2D1_MATRIX_3X2_F* transform)
+{
+    _this.SetTransform(transform);
+}
