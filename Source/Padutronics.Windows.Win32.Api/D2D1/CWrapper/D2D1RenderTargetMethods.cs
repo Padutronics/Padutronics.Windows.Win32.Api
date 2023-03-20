@@ -40,6 +40,9 @@ internal static class D2D1RenderTargetMethods
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_DrawLine(IntPtr @this, D2D_POINT_2F point0, D2D_POINT_2F point1, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
 
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_DrawRectangle(IntPtr @this, ref D2D_RECT_F rect, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
+
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_EndDraw(IntPtr @this, out long tag1, out long tag2);
 }
