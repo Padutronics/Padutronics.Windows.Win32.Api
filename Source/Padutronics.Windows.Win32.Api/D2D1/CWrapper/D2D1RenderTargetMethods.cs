@@ -68,6 +68,9 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_FillRectangle(IntPtr @this, ref D2D_RECT_F rect, IntPtr brush);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_FillRoundedRectangle(IntPtr @this, ref D2D1_ROUNDED_RECT roundedRect, IntPtr brush);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern D2D1_ANTIALIAS_MODE ID2D1RenderTarget_GetAntialiasMode(IntPtr @this);
 
     [DllImport(DllNames.CWrapper)]

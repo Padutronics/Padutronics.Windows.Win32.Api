@@ -100,6 +100,11 @@ void ID2D1RenderTarget_FillRectangle(ID2D1RenderTarget& _this, const D2D1_RECT_F
     _this.FillRectangle(rect, brush);
 }
 
+void ID2D1RenderTarget_FillRoundedRectangle(ID2D1RenderTarget& _this, const D2D1_ROUNDED_RECT* roundedRect, ID2D1Brush* brush)
+{
+    _this.FillRoundedRectangle(roundedRect, brush);
+}
+
 auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE
 {
     return _this.GetAntialiasMode();

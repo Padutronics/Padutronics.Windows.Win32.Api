@@ -24,5 +24,6 @@ EXPORT void ID2D1RenderTarget_FillEllipse(ID2D1RenderTarget& _this, const D2D1_E
 EXPORT void ID2D1RenderTarget_FillGeometry(ID2D1RenderTarget& _this, ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush);
 EXPORT void ID2D1RenderTarget_FillOpacityMask(ID2D1RenderTarget& _this, ID2D1Bitmap* opacityMask, ID2D1Brush* brush, D2D1_OPACITY_MASK_CONTENT content, const D2D1_RECT_F* destinationRectangle, const D2D1_RECT_F* sourceRectangle);
 EXPORT void ID2D1RenderTarget_FillRectangle(ID2D1RenderTarget& _this, const D2D1_RECT_F* rect, ID2D1Brush* brush);
+EXPORT void ID2D1RenderTarget_FillRoundedRectangle(ID2D1RenderTarget& _this, const D2D1_ROUNDED_RECT* roundedRect, ID2D1Brush* brush);
 EXPORT auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE;
 EXPORT void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode);
