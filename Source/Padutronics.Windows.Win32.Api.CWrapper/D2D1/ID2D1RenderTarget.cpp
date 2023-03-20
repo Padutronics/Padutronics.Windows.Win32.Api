@@ -45,6 +45,11 @@ void ID2D1RenderTarget_DrawEllipse(ID2D1RenderTarget& _this, const D2D1_ELLIPSE*
     _this.DrawEllipse(ellipse, brush, strokeWidth, strokeStyle);
 }
 
+void ID2D1RenderTarget_DrawGeometry(ID2D1RenderTarget& _this, ID2D1Geometry* geometry, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle)
+{
+    _this.DrawGeometry(geometry, brush, strokeWidth, strokeStyle);
+}
+
 auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TAG* tag2) -> HRESULT
 {
     return _this.EndDraw(tag1, tag2);

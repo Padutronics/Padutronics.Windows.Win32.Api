@@ -167,6 +167,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_DrawEllipse(This, ref ellipse, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
     }
 
+    public void DrawGeometry(ID2D1Geometry geometry, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawGeometry(This, geometry.Pointer, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+    }
+
     public void EndDraw(out long tag1, out long tag2)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_EndDraw(This, out tag1, out tag2);

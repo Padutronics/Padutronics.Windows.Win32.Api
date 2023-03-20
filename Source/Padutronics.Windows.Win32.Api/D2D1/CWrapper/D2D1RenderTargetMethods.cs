@@ -33,6 +33,9 @@ internal static class D2D1RenderTargetMethods
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_DrawEllipse(IntPtr @this, ref D2D1_ELLIPSE ellipse, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
 
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_DrawGeometry(IntPtr @this, IntPtr geometry, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
+
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_EndDraw(IntPtr @this, out long tag1, out long tag2);
 }
