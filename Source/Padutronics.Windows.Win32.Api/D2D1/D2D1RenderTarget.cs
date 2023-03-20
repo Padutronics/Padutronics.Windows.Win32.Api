@@ -293,6 +293,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_PopAxisAlignedClip(This);
     }
 
+    public void PopLayer()
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_PopLayer(This);
+    }
+
     public void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_SetAntialiasMode(This, antialiasMode);

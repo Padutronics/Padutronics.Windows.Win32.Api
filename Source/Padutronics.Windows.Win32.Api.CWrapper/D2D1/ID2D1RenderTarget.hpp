@@ -28,4 +28,5 @@ EXPORT void ID2D1RenderTarget_FillRoundedRectangle(ID2D1RenderTarget& _this, con
 EXPORT auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE;
 EXPORT void ID2D1RenderTarget_GetTransform(ID2D1RenderTarget& _this, D2D1_MATRIX_3X2_F* transform);
 EXPORT void ID2D1RenderTarget_PopAxisAlignedClip(ID2D1RenderTarget& _this);
+EXPORT void ID2D1RenderTarget_PopLayer(ID2D1RenderTarget& _this);
 EXPORT void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode);

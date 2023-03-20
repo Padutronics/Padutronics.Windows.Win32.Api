@@ -80,5 +80,8 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_PopAxisAlignedClip(IntPtr @this);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_PopLayer(IntPtr @this);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_SetAntialiasMode(IntPtr @this, D2D1_ANTIALIAS_MODE antialiasMode);
 }

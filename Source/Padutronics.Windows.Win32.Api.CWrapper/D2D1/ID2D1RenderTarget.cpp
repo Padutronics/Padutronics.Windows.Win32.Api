@@ -120,6 +120,11 @@ void ID2D1RenderTarget_PopAxisAlignedClip(ID2D1RenderTarget& _this)
     _this.PopAxisAlignedClip();
 }
 
+void ID2D1RenderTarget_PopLayer(ID2D1RenderTarget& _this)
+{
+    _this.PopLayer();
+}
+
 void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode)
 {
     _this.SetAntialiasMode(antialiasMode);
