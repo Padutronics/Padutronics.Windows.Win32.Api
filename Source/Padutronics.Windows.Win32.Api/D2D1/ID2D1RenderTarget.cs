@@ -28,4 +28,5 @@ public interface ID2D1RenderTarget : ID2D1Resource
     void FillEllipse(D2D1_ELLIPSE ellipse, ID2D1Brush brush);
     void FillGeometry(ID2D1Geometry geometry, ID2D1Brush brush, ID2D1Brush? opacityBrush);
     D2D1_ANTIALIAS_MODE GetAntialiasMode();
+    void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 }

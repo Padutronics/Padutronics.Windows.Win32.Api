@@ -94,3 +94,8 @@ auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIAL
 {
     return _this.GetAntialiasMode();
 }
+
+void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode)
+{
+    _this.SetAntialiasMode(antialiasMode);
+}

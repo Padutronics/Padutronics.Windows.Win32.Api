@@ -242,4 +242,9 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         return D2D1RenderTargetMethods.ID2D1RenderTarget_GetAntialiasMode(This);
     }
+
+    public void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_SetAntialiasMode(This, antialiasMode);
+    }
 }

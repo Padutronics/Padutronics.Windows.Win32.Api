@@ -63,4 +63,7 @@ internal static class D2D1RenderTargetMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern D2D1_ANTIALIAS_MODE ID2D1RenderTarget_GetAntialiasMode(IntPtr @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_SetAntialiasMode(IntPtr @this, D2D1_ANTIALIAS_MODE antialiasMode);
 }
