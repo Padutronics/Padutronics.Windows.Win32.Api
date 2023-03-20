@@ -40,6 +40,11 @@ auto ID2D1RenderTarget_CreateSolidColorBrush(ID2D1RenderTarget& _this, const D2D
     return _this.CreateSolidColorBrush(color, brushProperties, solidColorBrush);
 }
 
+void ID2D1RenderTarget_DrawBitmap(ID2D1RenderTarget& _this, ID2D1Bitmap* bitmap, const D2D1_RECT_F* destinationRectangle, FLOAT opacity, D2D1_BITMAP_INTERPOLATION_MODE interpolationMode, const D2D1_RECT_F* sourceRectangle)
+{
+    _this.DrawBitmap(bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+}
+
 void ID2D1RenderTarget_DrawEllipse(ID2D1RenderTarget& _this, const D2D1_ELLIPSE* ellipse, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle)
 {
     _this.DrawEllipse(ellipse, brush, strokeWidth, strokeStyle);

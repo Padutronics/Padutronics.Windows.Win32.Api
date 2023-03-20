@@ -32,6 +32,9 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_CreateSolidColorBrush(IntPtr @this, ref D3DCOLORVALUE color, IntPtr brushProperties, out IntPtr solidColorBrush);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RenderTarget_DrawBitmap(IntPtr @this, IntPtr bitmap, IntPtr destinationRectangle, float opacity, D2D1_BITMAP_INTERPOLATION_MODE interpolationMode, IntPtr sourceRectangle);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_DrawEllipse(IntPtr @this, ref D2D1_ELLIPSE ellipse, IntPtr brush, float strokeWidth, IntPtr strokeStyle);
 
     [DllImport(DllNames.CWrapper)]

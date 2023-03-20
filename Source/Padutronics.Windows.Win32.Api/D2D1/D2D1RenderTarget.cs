@@ -163,6 +163,36 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         solidColorBrush = new D2D1SolidColorBrush(solidColorBrushPointer);
     }
 
+    public void DrawBitmap(ID2D1Bitmap bitmap, D2D_RECT_F? destinationRectangle, float opacity, D2D1_BITMAP_INTERPOLATION_MODE interpolationMode, D2D_RECT_F? sourceRectangle)
+    {
+        D2D_RECT_F destinationRectangleCopy;
+        D2D_RECT_F sourceRectangleCopy;
+
+        IntPtr destinationRectanglePointer = IntPtr.Zero;
+        IntPtr sourceRectanglePointer = IntPtr.Zero;
+
+        if (destinationRectangle.HasValue)
+        {
+            destinationRectangleCopy = destinationRectangle.Value;
+
+            unsafe
+            {
+                destinationRectanglePointer = new IntPtr(&destinationRectangleCopy);
+            }
+        }
+        if (sourceRectangle.HasValue)
+        {
+            sourceRectangleCopy = sourceRectangle.Value;
+
+            unsafe
+            {
+                sourceRectanglePointer = new IntPtr(&sourceRectangleCopy);
+            }
+        }
+
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawBitmap(This, bitmap.Pointer, destinationRectanglePointer, opacity, interpolationMode, sourceRectanglePointer);
+    }
+
     public void DrawEllipse(D2D1_ELLIPSE ellipse, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_DrawEllipse(This, ref ellipse, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
