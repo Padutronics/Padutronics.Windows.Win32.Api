@@ -110,6 +110,11 @@ auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIAL
     return _this.GetAntialiasMode();
 }
 
+void ID2D1RenderTarget_GetTransform(ID2D1RenderTarget& _this, D2D1_MATRIX_3X2_F* transform)
+{
+    _this.GetTransform(transform);
+}
+
 void ID2D1RenderTarget_SetAntialiasMode(ID2D1RenderTarget& _this, D2D1_ANTIALIAS_MODE antialiasMode)
 {
     _this.SetAntialiasMode(antialiasMode);
