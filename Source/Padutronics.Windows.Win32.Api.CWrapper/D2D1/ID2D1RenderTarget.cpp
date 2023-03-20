@@ -40,6 +40,11 @@ auto ID2D1RenderTarget_CreateSolidColorBrush(ID2D1RenderTarget& _this, const D2D
     return _this.CreateSolidColorBrush(color, brushProperties, solidColorBrush);
 }
 
+void ID2D1RenderTarget_DrawEllipse(ID2D1RenderTarget& _this, const D2D1_ELLIPSE* ellipse, ID2D1Brush* brush, FLOAT strokeWidth, ID2D1StrokeStyle* strokeStyle)
+{
+    _this.DrawEllipse(ellipse, brush, strokeWidth, strokeStyle);
+}
+
 auto ID2D1RenderTarget_EndDraw(ID2D1RenderTarget& _this, D2D1_TAG* tag1, D2D1_TAG* tag2) -> HRESULT
 {
     return _this.EndDraw(tag1, tag2);
