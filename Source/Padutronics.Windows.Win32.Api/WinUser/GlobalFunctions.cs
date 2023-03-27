@@ -21,6 +21,9 @@ public static class GlobalFunctions
     [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int GetMessageW(ref MSG lpMsg, IntPtr hWnd, WM wMsgFilterMin, WM wMsgFilterMax);
 
+    [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
+    public static extern bool GetMonitorInfoW(IntPtr hMonitor, ref MONITORINFO lpmi);
+
     [DllImport(DllNames.User32, SetLastError = true)]
     public static extern int GetSystemMetrics(SM nIndex);
 
