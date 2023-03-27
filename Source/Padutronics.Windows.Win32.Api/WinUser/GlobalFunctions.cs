@@ -45,6 +45,9 @@ public static class GlobalFunctions
     [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern ushort RegisterClassExW(ref WNDCLASSEXW lpwcx);
 
+    [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
+    public static extern IntPtr SendMessageW(IntPtr hWnd, WM Msg, IntPtr wParam, IntPtr lParam);
+
     [DllImport(DllNames.User32, SetLastError = true)]
     public static extern IntPtr TranslateMessage(ref MSG lpMsg);
 }
