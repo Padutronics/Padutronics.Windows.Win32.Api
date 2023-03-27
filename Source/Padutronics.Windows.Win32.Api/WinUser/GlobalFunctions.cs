@@ -39,6 +39,9 @@ public static class GlobalFunctions
     [DllImport(DllNames.User32, SetLastError = true)]
     public static extern void PostQuitMessage(int nExitCode);
 
+    [DllImport(DllNames.User32, SetLastError = true)]
+    public static extern bool ReleaseCapture();
+
     [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern ushort RegisterClassExW(ref WNDCLASSEXW lpwcx);
 
