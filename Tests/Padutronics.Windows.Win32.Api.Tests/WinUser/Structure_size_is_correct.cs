@@ -14,6 +14,12 @@ internal sealed class Structure_size_is_correct
     }
 
     [Test]
+    public void Size_of_MONITORINFO()
+    {
+        Assert.That(Marshal.SizeOf(typeof(MONITORINFO)), Is.EqualTo(40));
+    }
+
+    [Test]
     public void Size_of_MSG()
     {
         Assert.That(Marshal.SizeOf(typeof(MSG)), Is.EqualTo(48));
