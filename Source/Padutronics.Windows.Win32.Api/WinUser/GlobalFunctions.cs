@@ -27,6 +27,9 @@ public static class GlobalFunctions
     [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern IntPtr LoadCursorW(IntPtr hInstance, IntPtr lpCursorName);
 
+    [DllImport(DllNames.User32, SetLastError = true)]
+    public static extern IntPtr MonitorFromWindow(IntPtr hwnd, MONITOR dwFlags);
+
     [DllImport(DllNames.User32, CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern bool PeekMessageW(ref MSG lpMsg, IntPtr hWnd, WM wMsgFilterMin, WM wMsgFilterMax, PM wRemoveMsg);
 
