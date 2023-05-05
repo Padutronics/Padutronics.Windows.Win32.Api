@@ -17,4 +17,11 @@ public class DWriteFactory : Unknown, IDWriteFactory
 
         textFormat = new DWriteTextFormat(textFormatPointer);
     }
+
+    public void CreateTextLayout(string @string, int stringLength, IDWriteTextFormat textFormat, float maxWidth, float maxHeight, out IDWriteTextLayout textLayout)
+    {
+        DWriteFactoryMethods.IDWriteFactory_CreateTextLayout(This, @string, stringLength, textFormat.Pointer, maxWidth, maxHeight, out IntPtr textLayoutPointer);
+
+        textLayout = new DWriteTextLayout(textLayoutPointer);
+    }
 }

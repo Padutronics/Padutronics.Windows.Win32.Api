@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.DWrite;
 public interface IDWriteFactory : IUnknown
 {
     void CreateTextFormat(string fontFamilyName, IDWriteFontCollection? fontCollection, DWRITE_FONT_WEIGHT fontWeight, DWRITE_FONT_STYLE fontStyle, DWRITE_FONT_STRETCH fontStretch, float fontSize, string localeName, out IDWriteTextFormat textFormat);
+    void CreateTextLayout(string @string, int stringLength, IDWriteTextFormat textFormat, float maxWidth, float maxHeight, out IDWriteTextLayout textLayout);
 }

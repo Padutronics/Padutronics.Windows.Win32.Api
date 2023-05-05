@@ -4,3 +4,8 @@ auto IDWriteFactory_CreateTextFormat(IDWriteFactory& _this, WCHAR const* fontFam
 {
     return _this.CreateTextFormat(fontFamilyName, fontCollection, fontWeight, fontStyle, fontStretch, fontSize, localeName, textFormat);
 }
+
+auto IDWriteFactory_CreateTextLayout(IDWriteFactory& _this, WCHAR const* string, UINT32 stringLength, IDWriteTextFormat* textFormat, FLOAT maxWidth, FLOAT maxHeight, IDWriteTextLayout** textLayout) -> HRESULT
+{
+    return _this.CreateTextLayout(string, stringLength, textFormat, maxWidth, maxHeight, textLayout);
+}
