@@ -1,4 +1,4 @@
-#include "IDWriteFactory.hpp"
+#include "IDWriteTextLayout.hpp"
 
 auto IDWriteTextLayout_GetMetrics(IDWriteTextLayout& _this, DWRITE_TEXT_METRICS* textMetrics) -> HRESULT
 {
