@@ -1,5 +1,3 @@
-using System;
-
 namespace Padutronics.Windows.Win32.Api.WinUser;
 
 public static class Macros
@@ -9,7 +7,7 @@ public static class Macros
         return (short)(value >> 16);
     }
 
-    public static short HIWORD(IntPtr value)
+    public static short HIWORD(nint value)
     {
         return HIWORD(unchecked((int)value.ToInt64()));
     }
@@ -19,7 +17,7 @@ public static class Macros
         return (short)(value & 0x0000FFFF);
     }
 
-    public static short LOWORD(IntPtr value)
+    public static short LOWORD(nint value)
     {
         return LOWORD(unchecked((int)value.ToInt64()));
     }

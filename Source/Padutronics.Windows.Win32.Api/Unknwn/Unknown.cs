@@ -1,12 +1,11 @@
 using Padutronics.Interoperability;
 using Padutronics.Windows.Win32.Api.Unknwn.CWrapper;
-using System;
 
 namespace Padutronics.Windows.Win32.Api.Unknwn;
 
 public class Unknown : UnmanagedClass, IUnknown
 {
-    public Unknown(IntPtr pointer) :
+    public Unknown(nint pointer) :
         base(pointer)
     {
     }

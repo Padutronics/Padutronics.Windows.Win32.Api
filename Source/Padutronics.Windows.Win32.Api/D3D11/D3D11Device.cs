@@ -1,12 +1,11 @@
 using Padutronics.Windows.Win32.Api.D3D11.CWrapper;
 using Padutronics.Windows.Win32.Api.Unknwn;
-using System;
 
 namespace Padutronics.Windows.Win32.Api.D3D11;
 
 public class D3D11Device : Unknown, ID3D11Device
 {
-    public D3D11Device(IntPtr pointer) :
+    public D3D11Device(nint pointer) :
         base(pointer)
     {
     }
@@ -15,7 +14,7 @@ public class D3D11Device : Unknown, ID3D11Device
     {
         D3D11_RENDER_TARGET_VIEW_DESC pDescCopy;
 
-        IntPtr pDescPointer = IntPtr.Zero;
+        nint pDescPointer = nint.Zero;
 
         if (pDesc.HasValue)
         {
@@ -23,18 +22,18 @@ public class D3D11Device : Unknown, ID3D11Device
 
             unsafe
             {
-                pDescPointer = new IntPtr(&pDescCopy);
+                pDescPointer = new nint(&pDescCopy);
             }
         }
 
-        D3D11DeviceMethods.ID3D11Device_CreateRenderTargetView(This, pResource.Pointer, pDescPointer, out IntPtr ppRTViewPointer);
+        D3D11DeviceMethods.ID3D11Device_CreateRenderTargetView(This, pResource.Pointer, pDescPointer, out nint ppRTViewPointer);
 
         ppRTView = new D3D11RenderTargetView(ppRTViewPointer);
     }
 
     public void GetImmediateContext(out ID3D11DeviceContext ppImmediateContext)
     {
-        D3D11DeviceMethods.ID3D11Device_GetImmediateContext(This, out IntPtr ppImmediateContextPointer);
+        D3D11DeviceMethods.ID3D11Device_GetImmediateContext(This, out nint ppImmediateContextPointer);
 
         ppImmediateContext = new D3D11DeviceContext(ppImmediateContextPointer);
     }

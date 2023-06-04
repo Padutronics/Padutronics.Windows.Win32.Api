@@ -6,12 +6,12 @@ namespace Padutronics.Windows.Win32.Api.Dxgi;
 
 public class DXGISwapChain : DXGIDeviceSubObject, IDXGISwapChain
 {
-    public DXGISwapChain(IntPtr pointer) :
+    public DXGISwapChain(nint pointer) :
         base(pointer)
     {
     }
 
-    public void GetBuffer(int Buffer, Guid riid, out IntPtr ppSurface)
+    public void GetBuffer(int Buffer, Guid riid, out nint ppSurface)
     {
         DXGISwapChainMethods.IDXGISwapChain_GetBuffer(This, Buffer, ref riid, out ppSurface);
     }

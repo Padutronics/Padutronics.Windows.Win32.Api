@@ -1,12 +1,11 @@
 using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
 using Padutronics.Windows.Win32.Api.DCommon;
-using System;
 
 namespace Padutronics.Windows.Win32.Api.D2D1;
 
 public class D2D1Geometry : D2D1Resource, ID2D1Geometry
 {
-    public D2D1Geometry(IntPtr pointer) :
+    public D2D1Geometry(nint pointer) :
         base(pointer)
     {
     }
@@ -15,7 +14,7 @@ public class D2D1Geometry : D2D1Resource, ID2D1Geometry
     {
         D2D_MATRIX_3X2_F inputGeometryTransformCopy;
 
-        IntPtr inputGeometryTransformPointer = IntPtr.Zero;
+        nint inputGeometryTransformPointer = nint.Zero;
 
         if (inputGeometryTransform.HasValue)
         {
@@ -23,7 +22,7 @@ public class D2D1Geometry : D2D1Resource, ID2D1Geometry
 
             unsafe
             {
-                inputGeometryTransformPointer = new IntPtr(&inputGeometryTransformCopy);
+                inputGeometryTransformPointer = new nint(&inputGeometryTransformCopy);
             }
         }
 

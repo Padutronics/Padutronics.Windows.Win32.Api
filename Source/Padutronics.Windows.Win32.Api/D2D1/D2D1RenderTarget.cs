@@ -3,13 +3,12 @@ using Padutronics.Windows.Win32.Api.DCommon;
 using Padutronics.Windows.Win32.Api.DWrite;
 using Padutronics.Windows.Win32.Api.DxgiType;
 using Padutronics.Windows.Win32.Api.WinCodec;
-using System;
 
 namespace Padutronics.Windows.Win32.Api.D2D1;
 
 public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 {
-    public D2D1RenderTarget(IntPtr pointer) :
+    public D2D1RenderTarget(nint pointer) :
         base(pointer)
     {
     }
@@ -24,8 +23,8 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1_BITMAP_BRUSH_PROPERTIES bitmapBrushPropertiesCopy;
         D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
 
-        IntPtr bitmapBrushPropertiesPointer = IntPtr.Zero;
-        IntPtr brushPropertiesPointer = IntPtr.Zero;
+        nint bitmapBrushPropertiesPointer = nint.Zero;
+        nint brushPropertiesPointer = nint.Zero;
 
         if (bitmapBrushProperties.HasValue)
         {
@@ -33,7 +32,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                bitmapBrushPropertiesPointer = new IntPtr(&bitmapBrushPropertiesCopy);
+                bitmapBrushPropertiesPointer = new nint(&bitmapBrushPropertiesCopy);
             }
         }
         if (brushProperties.HasValue)
@@ -42,11 +41,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+                brushPropertiesPointer = new nint(&brushPropertiesCopy);
             }
         }
 
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapBrush(This, bitmap?.Pointer ?? IntPtr.Zero, bitmapBrushPropertiesPointer, brushPropertiesPointer, out IntPtr bitmapBrushPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapBrush(This, bitmap?.Pointer ?? nint.Zero, bitmapBrushPropertiesPointer, brushPropertiesPointer, out nint bitmapBrushPointer);
 
         bitmapBrush = new D2D1BitmapBrush(bitmapBrushPointer);
     }
@@ -55,7 +54,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1_BITMAP_PROPERTIES bitmapPropertiesCopy;
 
-        IntPtr bitmapPropertiesPointer = IntPtr.Zero;
+        nint bitmapPropertiesPointer = nint.Zero;
 
         if (bitmapProperties.HasValue)
         {
@@ -63,18 +62,18 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                bitmapPropertiesPointer = new IntPtr(&bitmapPropertiesCopy);
+                bitmapPropertiesPointer = new nint(&bitmapPropertiesCopy);
             }
         }
 
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapFromWicBitmap(This, wicBitmapSource.Pointer, bitmapPropertiesPointer, out IntPtr bitmapPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmapFromWicBitmap(This, wicBitmapSource.Pointer, bitmapPropertiesPointer, out nint bitmapPointer);
 
         bitmap = new D2D1Bitmap(bitmapPointer);
     }
 
     public void CreateGradientStopCollection(D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, out ID2D1GradientStopCollection gradientStopCollection)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateGradientStopCollection(This, gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, out IntPtr gradientStopCollectionPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateGradientStopCollection(This, gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, out nint gradientStopCollectionPointer);
 
         gradientStopCollection = new D2D1GradientStopCollection(gradientStopCollectionPointer);
     }
@@ -83,7 +82,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D_SIZE_F sizeCopy;
 
-        IntPtr sizePointer = IntPtr.Zero;
+        nint sizePointer = nint.Zero;
 
         if (size.HasValue)
         {
@@ -91,11 +90,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                sizePointer = new IntPtr(&sizeCopy);
+                sizePointer = new nint(&sizeCopy);
             }
         }
 
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateLayer(This, sizePointer, out IntPtr layerPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateLayer(This, sizePointer, out nint layerPointer);
 
         layer = new D2D1Layer(layerPointer);
     }
@@ -104,7 +103,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
 
-        IntPtr brushPropertiesPointer = IntPtr.Zero;
+        nint brushPropertiesPointer = nint.Zero;
 
         if (brushProperties.HasValue)
         {
@@ -112,11 +111,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+                brushPropertiesPointer = new nint(&brushPropertiesCopy);
             }
         }
 
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateLinearGradientBrush(This, ref linearGradientBrushProperties, brushPropertiesPointer, gradientStopCollection.Pointer, out IntPtr linearGradientBrushPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateLinearGradientBrush(This, ref linearGradientBrushProperties, brushPropertiesPointer, gradientStopCollection.Pointer, out nint linearGradientBrushPointer);
 
         linearGradientBrush = new D2D1LinearGradientBrush(linearGradientBrushPointer);
     }
@@ -125,7 +124,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
 
-        IntPtr brushPropertiesPointer = IntPtr.Zero;
+        nint brushPropertiesPointer = nint.Zero;
 
         if (brushProperties.HasValue)
         {
@@ -133,11 +132,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+                brushPropertiesPointer = new nint(&brushPropertiesCopy);
             }
         }
 
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateRadialGradientBrush(This, ref radialGradientBrushProperties, brushPropertiesPointer, gradientStopCollection.Pointer, out IntPtr radialGradientBrushPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateRadialGradientBrush(This, ref radialGradientBrushProperties, brushPropertiesPointer, gradientStopCollection.Pointer, out nint radialGradientBrushPointer);
 
         radialGradientBrush = new D2D1RadialGradientBrush(radialGradientBrushPointer);
     }
@@ -146,7 +145,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
     {
         D2D1_BRUSH_PROPERTIES brushPropertiesCopy;
 
-        IntPtr brushPropertiesPointer = IntPtr.Zero;
+        nint brushPropertiesPointer = nint.Zero;
 
         if (brushProperties.HasValue)
         {
@@ -154,11 +153,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                brushPropertiesPointer = new IntPtr(&brushPropertiesCopy);
+                brushPropertiesPointer = new nint(&brushPropertiesCopy);
             }
         }
 
-        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateSolidColorBrush(This, ref color, brushPropertiesPointer, out IntPtr solidColorBrushPointer);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateSolidColorBrush(This, ref color, brushPropertiesPointer, out nint solidColorBrushPointer);
 
         solidColorBrush = new D2D1SolidColorBrush(solidColorBrushPointer);
     }
@@ -168,8 +167,8 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D_RECT_F destinationRectangleCopy;
         D2D_RECT_F sourceRectangleCopy;
 
-        IntPtr destinationRectanglePointer = IntPtr.Zero;
-        IntPtr sourceRectanglePointer = IntPtr.Zero;
+        nint destinationRectanglePointer = nint.Zero;
+        nint sourceRectanglePointer = nint.Zero;
 
         if (destinationRectangle.HasValue)
         {
@@ -177,7 +176,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                destinationRectanglePointer = new IntPtr(&destinationRectangleCopy);
+                destinationRectanglePointer = new nint(&destinationRectangleCopy);
             }
         }
         if (sourceRectangle.HasValue)
@@ -186,7 +185,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                sourceRectanglePointer = new IntPtr(&sourceRectangleCopy);
+                sourceRectanglePointer = new nint(&sourceRectangleCopy);
             }
         }
 
@@ -195,27 +194,27 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
     public void DrawEllipse(D2D1_ELLIPSE ellipse, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawEllipse(This, ref ellipse, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawEllipse(This, ref ellipse, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? nint.Zero);
     }
 
     public void DrawGeometry(ID2D1Geometry geometry, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawGeometry(This, geometry.Pointer, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawGeometry(This, geometry.Pointer, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? nint.Zero);
     }
 
     public void DrawLine(D2D_POINT_2F point0, D2D_POINT_2F point1, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawLine(This, point0, point1, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawLine(This, point0, point1, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? nint.Zero);
     }
 
     public void DrawRectangle(D2D_RECT_F rect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRectangle(This, ref rect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRectangle(This, ref rect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? nint.Zero);
     }
 
     public void DrawRoundedRectangle(D2D1_ROUNDED_RECT roundedRect, ID2D1Brush brush, float strokeWidth, ID2D1StrokeStyle? strokeStyle)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRoundedRectangle(This, ref roundedRect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_DrawRoundedRectangle(This, ref roundedRect, brush.Pointer, strokeWidth, strokeStyle?.Pointer ?? nint.Zero);
     }
 
     public void DrawText(string @string, int stringLength, IDWriteTextFormat textFormat, D2D_RECT_F layoutRect, ID2D1Brush defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode)
@@ -235,7 +234,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
     public void FillGeometry(ID2D1Geometry geometry, ID2D1Brush brush, ID2D1Brush? opacityBrush)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_FillGeometry(This, geometry.Pointer, brush.Pointer, opacityBrush?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_FillGeometry(This, geometry.Pointer, brush.Pointer, opacityBrush?.Pointer ?? nint.Zero);
     }
 
     public void FillOpacityMask(ID2D1Bitmap opacityMask, ID2D1Brush brush, D2D1_OPACITY_MASK_CONTENT content, D2D_RECT_F? destinationRectangle, D2D_RECT_F? sourceRectangle)
@@ -243,8 +242,8 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D_RECT_F destinationRectangleCopy;
         D2D_RECT_F sourceRectangleCopy;
 
-        IntPtr destinationRectanglePointer = IntPtr.Zero;
-        IntPtr sourceRectanglePointer = IntPtr.Zero;
+        nint destinationRectanglePointer = nint.Zero;
+        nint sourceRectanglePointer = nint.Zero;
 
         if (destinationRectangle.HasValue)
         {
@@ -252,7 +251,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                destinationRectanglePointer = new IntPtr(&destinationRectangleCopy);
+                destinationRectanglePointer = new nint(&destinationRectangleCopy);
             }
         }
         if (sourceRectangle.HasValue)
@@ -261,7 +260,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
             unsafe
             {
-                sourceRectanglePointer = new IntPtr(&sourceRectangleCopy);
+                sourceRectanglePointer = new nint(&sourceRectangleCopy);
             }
         }
 
@@ -305,7 +304,7 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
 
     public void PushLayer(D2D1_LAYER_PARAMETERS layerParameters, ID2D1Layer? layer)
     {
-        D2D1RenderTargetMethods.ID2D1RenderTarget_PushLayer(This, ref layerParameters, layer?.Pointer ?? IntPtr.Zero);
+        D2D1RenderTargetMethods.ID2D1RenderTarget_PushLayer(This, ref layerParameters, layer?.Pointer ?? nint.Zero);
     }
 
     public void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode)
