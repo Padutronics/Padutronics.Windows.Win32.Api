@@ -13,6 +13,9 @@ internal static class D2D1FactoryMethods
     public static extern void ID2D1Factory_CreateEllipseGeometry(IntPtr @this, ref D2D1_ELLIPSE ellipse, out IntPtr ellipseGeometry);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
+    public static extern void ID2D1Factory_CreateGeometryGroup(IntPtr @this, D2D1_FILL_MODE fillMode, IntPtr[] geometries, int geometriesCount, out IntPtr geometryGroup);
+
+    [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1Factory_CreatePathGeometry(IntPtr @this, out IntPtr pathGeometry);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]

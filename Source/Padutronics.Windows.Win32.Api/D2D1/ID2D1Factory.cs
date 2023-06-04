@@ -10,6 +10,7 @@ public interface ID2D1Factory : IUnknown
 {
     void CreateDxgiSurfaceRenderTarget(IDXGISurface dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES renderTargetProperties, out ID2D1RenderTarget renderTarget);
     void CreateEllipseGeometry(D2D1_ELLIPSE ellipse, out ID2D1EllipseGeometry ellipseGeometry);
+    void CreateGeometryGroup(D2D1_FILL_MODE fillMode, ID2D1Geometry[] geometries, int geometriesCount, out ID2D1GeometryGroup geometryGroup);
     void CreatePathGeometry(out ID2D1PathGeometry pathGeometry);
     void CreateRectangleGeometry(D2D_RECT_F rectangle, out ID2D1RectangleGeometry rectangleGeometry);
     void CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES strokeStyleProperties, float[]? dashes, int dashesCount, out ID2D1StrokeStyle strokeStyle);

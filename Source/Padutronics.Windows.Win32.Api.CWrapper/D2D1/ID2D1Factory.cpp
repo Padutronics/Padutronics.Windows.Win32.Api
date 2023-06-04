@@ -10,6 +10,11 @@ auto ID2D1Factory_CreateEllipseGeometry(ID2D1Factory& _this, const D2D1_ELLIPSE*
     return _this.CreateEllipseGeometry(ellipse, ellipseGeometry);
 }
 
+auto ID2D1Factory_CreateGeometryGroup(ID2D1Factory& _this, D2D1_FILL_MODE fillMode, ID2D1Geometry** geometries, UINT32 geometriesCount, ID2D1GeometryGroup** geometryGroup) -> HRESULT
+{
+    return _this.CreateGeometryGroup(fillMode, geometries, geometriesCount, geometryGroup);
+}
+
 auto ID2D1Factory_CreatePathGeometry(ID2D1Factory& _this, ID2D1PathGeometry** pathGeometry) -> HRESULT
 {
     return _this.CreatePathGeometry(pathGeometry);

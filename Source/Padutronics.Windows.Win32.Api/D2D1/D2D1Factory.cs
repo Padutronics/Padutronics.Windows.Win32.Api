@@ -1,3 +1,4 @@
+using Padutronics.Interoperability;
 using Padutronics.Windows.Win32.Api.D2D1.CWrapper;
 using Padutronics.Windows.Win32.Api.DCommon;
 using Padutronics.Windows.Win32.Api.Dxgi;
@@ -25,6 +26,13 @@ public class D2D1Factory : Unknown, ID2D1Factory
         D2D1FactoryMethods.ID2D1Factory_CreateEllipseGeometry(This, ref ellipse, out IntPtr ellipseGeometryPointer);
 
         ellipseGeometry = new D2D1EllipseGeometry(ellipseGeometryPointer);
+    }
+
+    public void CreateGeometryGroup(D2D1_FILL_MODE fillMode, ID2D1Geometry[] geometries, int geometriesCount, out ID2D1GeometryGroup geometryGroup)
+    {
+        D2D1FactoryMethods.ID2D1Factory_CreateGeometryGroup(This, fillMode, geometries.ToArrayOfPointers(), geometriesCount, out IntPtr geometryGroupPointer);
+
+        geometryGroup = new D2D1GeometryGroup(geometryGroupPointer);
     }
 
     public void CreatePathGeometry(out ID2D1PathGeometry pathGeometry)
