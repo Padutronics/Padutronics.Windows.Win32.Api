@@ -7,4 +7,7 @@ internal static class D2D1BitmapMethods
 {
     [DllImport(DllNames.CWrapper)]
     public static extern D2D_SIZE_U ID2D1Bitmap_GetPixelSize(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern D2D_SIZE_F ID2D1Bitmap_GetSize(nint @this);
 }

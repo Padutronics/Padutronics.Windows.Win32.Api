@@ -14,4 +14,9 @@ public class D2D1Bitmap : D2D1Image, ID2D1Bitmap
     {
         return D2D1BitmapMethods.ID2D1Bitmap_GetPixelSize(This);
     }
+
+    public D2D_SIZE_F GetSize()
+    {
+        return D2D1BitmapMethods.ID2D1Bitmap_GetSize(This);
+    }
 }

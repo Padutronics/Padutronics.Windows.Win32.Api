@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1Bitmap : ID2D1Image
 {
     D2D_SIZE_U GetPixelSize();
+    D2D_SIZE_F GetSize();
 }
