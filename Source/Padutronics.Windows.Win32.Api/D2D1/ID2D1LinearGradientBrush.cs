@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1LinearGradientBrush : ID2D1Brush
 {
     D2D_POINT_2F GetEndPoint();
+    D2D_POINT_2F GetStartPoint();
 }
