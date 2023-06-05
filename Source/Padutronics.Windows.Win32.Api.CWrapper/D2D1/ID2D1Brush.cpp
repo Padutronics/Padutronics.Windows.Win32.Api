@@ -9,3 +9,8 @@ void ID2D1Brush_GetTransform(ID2D1Brush& _this, D2D1_MATRIX_3X2_F* transform)
 {
     _this.GetTransform(transform);
 }
+
+void ID2D1Brush_SetOpacity(ID2D1Brush& _this, FLOAT opacity)
+{
+    _this.SetOpacity(opacity);
+}

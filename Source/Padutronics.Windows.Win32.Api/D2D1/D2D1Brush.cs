@@ -19,4 +19,9 @@ public class D2D1Brush : D2D1Resource, ID2D1Brush
     {
         D2D1BrushMethods.ID2D1Brush_GetTransform(This, out transform);
     }
+
+    public void SetOpacity(float opacity)
+    {
+        D2D1BrushMethods.ID2D1Brush_SetOpacity(This, opacity);
+    }
 }

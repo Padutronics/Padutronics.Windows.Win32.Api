@@ -8,4 +8,5 @@ public interface ID2D1Brush : ID2D1Resource
 {
     float GetOpacity();
     void GetTransform(out D2D_MATRIX_3X2_F transform);
+    void SetOpacity(float opacity);
 }

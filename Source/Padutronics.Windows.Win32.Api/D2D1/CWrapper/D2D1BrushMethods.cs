@@ -10,4 +10,7 @@ internal static class D2D1BrushMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1Brush_GetTransform(nint @this, out D2D_MATRIX_3X2_F transform);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1Brush_SetOpacity(nint @this, float opacity);
 }
