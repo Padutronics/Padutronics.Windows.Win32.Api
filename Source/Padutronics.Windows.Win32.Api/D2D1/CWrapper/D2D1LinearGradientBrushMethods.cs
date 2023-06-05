@@ -9,6 +9,9 @@ internal static class D2D1LinearGradientBrushMethods
     public static extern D2D_POINT_2F ID2D1LinearGradientBrush_GetEndPoint(nint @this);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1LinearGradientBrush_GetGradientStopCollection(nint @this, out nint gradientStopCollection);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern D2D_POINT_2F ID2D1LinearGradientBrush_GetStartPoint(nint @this);
 
     [DllImport(DllNames.CWrapper)]
