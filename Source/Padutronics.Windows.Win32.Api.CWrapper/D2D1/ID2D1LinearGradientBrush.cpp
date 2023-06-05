@@ -14,3 +14,8 @@ void ID2D1LinearGradientBrush_SetEndPoint(ID2D1LinearGradientBrush& _this, D2D1_
 {
     _this.SetEndPoint(endPoint);
 }
+
+void ID2D1LinearGradientBrush_SetStartPoint(ID2D1LinearGradientBrush& _this, D2D1_POINT_2F startPoint)
+{
+    _this.SetStartPoint(startPoint);
+}

@@ -13,4 +13,7 @@ internal static class D2D1LinearGradientBrushMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1LinearGradientBrush_SetEndPoint(nint @this, D2D_POINT_2F endPoint);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1LinearGradientBrush_SetStartPoint(nint @this, D2D_POINT_2F startPoint);
 }

@@ -9,4 +9,5 @@ public interface ID2D1LinearGradientBrush : ID2D1Brush
     D2D_POINT_2F GetEndPoint();
     D2D_POINT_2F GetStartPoint();
     void SetEndPoint(D2D_POINT_2F endPoint);
+    void SetStartPoint(D2D_POINT_2F startPoint);
 }

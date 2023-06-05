@@ -24,4 +24,9 @@ public class D2D1LinearGradientBrush : D2D1Brush, ID2D1LinearGradientBrush
     {
         D2D1LinearGradientBrushMethods.ID2D1LinearGradientBrush_SetEndPoint(This, endPoint);
     }
+
+    public void SetStartPoint(D2D_POINT_2F startPoint)
+    {
+        D2D1LinearGradientBrushMethods.ID2D1LinearGradientBrush_SetStartPoint(This, startPoint);
+    }
 }
