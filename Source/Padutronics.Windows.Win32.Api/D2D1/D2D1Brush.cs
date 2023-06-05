@@ -24,4 +24,9 @@ public class D2D1Brush : D2D1Resource, ID2D1Brush
     {
         D2D1BrushMethods.ID2D1Brush_SetOpacity(This, opacity);
     }
+
+    public void SetTransform(ref D2D_MATRIX_3X2_F transform)
+    {
+        D2D1BrushMethods.ID2D1Brush_SetTransform(This, ref transform);
+    }
 }
