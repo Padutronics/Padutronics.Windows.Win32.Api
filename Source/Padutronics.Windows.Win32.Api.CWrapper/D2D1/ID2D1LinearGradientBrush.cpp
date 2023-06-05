@@ -9,3 +9,8 @@ auto ID2D1LinearGradientBrush_GetStartPoint(ID2D1LinearGradientBrush& _this) -> 
 {
     return _this.GetStartPoint();
 }
+
+void ID2D1LinearGradientBrush_SetEndPoint(ID2D1LinearGradientBrush& _this, D2D1_POINT_2F endPoint)
+{
+    _this.SetEndPoint(endPoint);
+}
