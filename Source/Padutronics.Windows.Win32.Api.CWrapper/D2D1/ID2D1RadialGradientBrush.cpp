@@ -34,3 +34,8 @@ void ID2D1RadialGradientBrush_SetGradientOriginOffset(ID2D1RadialGradientBrush& 
 {
     _this.SetGradientOriginOffset(gradientOriginOffset);
 }
+
+void ID2D1RadialGradientBrush_SetRadiusX(ID2D1RadialGradientBrush& _this, FLOAT radiusX)
+{
+    _this.SetRadiusX(radiusX);
+}

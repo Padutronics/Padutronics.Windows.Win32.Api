@@ -13,4 +13,5 @@ public interface ID2D1RadialGradientBrush : ID2D1Brush
     float GetRadiusY();
     void SetCenter(D2D_POINT_2F center);
     void SetGradientOriginOffset(D2D_POINT_2F gradientOriginOffset);
+    void SetRadiusX(float radiusX);
 }
