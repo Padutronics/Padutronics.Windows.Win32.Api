@@ -12,6 +12,9 @@ internal static class D2D1RadialGradientBrushMethods
     public static extern D2D_POINT_2F ID2D1RadialGradientBrush_GetGradientOriginOffset(nint @this);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RadialGradientBrush_GetGradientStopCollection(nint @this, out nint gradientStopCollection);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern float ID2D1RadialGradientBrush_GetRadiusX(nint @this);
 
     [DllImport(DllNames.CWrapper)]

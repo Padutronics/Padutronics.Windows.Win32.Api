@@ -20,6 +20,13 @@ public class D2D1RadialGradientBrush : D2D1Brush, ID2D1RadialGradientBrush
         return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetGradientOriginOffset(This);
     }
 
+    public void GetGradientStopCollection(out ID2D1GradientStopCollection gradientStopCollection)
+    {
+        D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetGradientStopCollection(This, out nint gradientStopCollectionPointer);
+
+        gradientStopCollection = new D2D1GradientStopCollection(gradientStopCollectionPointer);
+    }
+
     public float GetRadiusX()
     {
         return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetRadiusX(This);

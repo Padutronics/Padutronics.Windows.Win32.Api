@@ -8,6 +8,7 @@ public interface ID2D1RadialGradientBrush : ID2D1Brush
 {
     D2D_POINT_2F GetCenter();
     D2D_POINT_2F GetGradientOriginOffset();
+    void GetGradientStopCollection(out ID2D1GradientStopCollection gradientStopCollection);
     float GetRadiusX();
     float GetRadiusY();
 }
