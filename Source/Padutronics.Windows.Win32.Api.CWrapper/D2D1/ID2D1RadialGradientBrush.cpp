@@ -29,3 +29,8 @@ void ID2D1RadialGradientBrush_SetCenter(ID2D1RadialGradientBrush& _this, D2D1_PO
 {
     _this.SetCenter(center);
 }
+
+void ID2D1RadialGradientBrush_SetGradientOriginOffset(ID2D1RadialGradientBrush& _this, D2D1_POINT_2F gradientOriginOffset)
+{
+    _this.SetGradientOriginOffset(gradientOriginOffset);
+}

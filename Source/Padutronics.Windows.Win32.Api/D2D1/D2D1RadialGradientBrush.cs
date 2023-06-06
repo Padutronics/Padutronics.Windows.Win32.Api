@@ -41,4 +41,9 @@ public class D2D1RadialGradientBrush : D2D1Brush, ID2D1RadialGradientBrush
     {
         D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_SetCenter(This, center);
     }
+
+    public void SetGradientOriginOffset(D2D_POINT_2F gradientOriginOffset)
+    {
+        D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_SetGradientOriginOffset(This, gradientOriginOffset);
+    }
 }
