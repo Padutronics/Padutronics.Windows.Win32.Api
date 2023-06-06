@@ -19,6 +19,7 @@ add_library(
     D2D1/ID2D1EllipseGeometry.cpp
     D2D1/ID2D1Factory.cpp
     D2D1/ID2D1Geometry.cpp
+    D2D1/ID2D1GeometryGroup.cpp
     D2D1/ID2D1GradientStopCollection.cpp
     D2D1/ID2D1LinearGradientBrush.cpp
     D2D1/ID2D1PathGeometry.cpp
