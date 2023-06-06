@@ -26,6 +26,7 @@ add_library(
     D2D1/ID2D1RadialGradientBrush.cpp
     D2D1/ID2D1RectangleGeometry.cpp
     D2D1/ID2D1RenderTarget.cpp
+    D2D1/ID2D1Resource.cpp
     D2D1/ID2D1SimplifiedGeometrySink.cpp
     D2D1/ID2D1SolidColorBrush.cpp
     D2D1/ID2D1StrokeStyle.cpp
