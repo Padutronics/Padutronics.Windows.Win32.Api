@@ -31,6 +31,7 @@ add_library(
     D3D11/ID3D11Device.cpp
     D3D11/ID3D11DeviceContext.cpp
     DWrite/IDWriteFactory.cpp
+    DWrite/IDWriteTextFormat.cpp
     DWrite/IDWriteTextLayout.cpp
     Dxgi/IDXGIFactory.cpp
     Dxgi/IDXGISwapChain.cpp
