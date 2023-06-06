@@ -16,6 +16,7 @@ add_library(
     D2D1/ID2D1Bitmap.cpp
     D2D1/ID2D1BitmapBrush.cpp
     D2D1/ID2D1Brush.cpp
+    D2D1/ID2D1EllipseGeometry.cpp
     D2D1/ID2D1Factory.cpp
     D2D1/ID2D1Geometry.cpp
     D2D1/ID2D1GradientStopCollection.cpp
