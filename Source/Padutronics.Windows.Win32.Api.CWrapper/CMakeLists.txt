@@ -19,6 +19,7 @@ add_library(
     D2D1/ID2D1Geometry.cpp
     D2D1/ID2D1LinearGradientBrush.cpp
     D2D1/ID2D1PathGeometry.cpp
+    D2D1/ID2D1RadialGradientBrush.cpp
     D2D1/ID2D1RenderTarget.cpp
     D2D1/ID2D1SimplifiedGeometrySink.cpp
     D2D1/ID2D1SolidColorBrush.cpp
