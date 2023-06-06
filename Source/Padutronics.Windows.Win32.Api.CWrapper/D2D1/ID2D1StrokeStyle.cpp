@@ -25,6 +25,11 @@ auto ID2D1StrokeStyle_GetLineJoin(ID2D1StrokeStyle& _this) -> D2D1_LINE_JOIN
     return _this.GetLineJoin();
 }
 
+auto ID2D1StrokeStyle_GetMiterLimit(ID2D1StrokeStyle& _this) -> FLOAT
+{
+    return _this.GetMiterLimit();
+}
+
 auto ID2D1StrokeStyle_GetStartCap(ID2D1StrokeStyle& _this) -> D2D1_CAP_STYLE
 {
     return _this.GetStartCap();

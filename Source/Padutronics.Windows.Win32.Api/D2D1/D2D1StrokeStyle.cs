@@ -34,6 +34,11 @@ public class D2D1StrokeStyle : D2D1Resource, ID2D1StrokeStyle
         return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetLineJoin(This);
     }
 
+    public float GetMiterLimit()
+    {
+        return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetMiterLimit(This);
+    }
+
     public D2D1_CAP_STYLE GetStartCap()
     {
         return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetStartCap(This);
