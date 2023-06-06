@@ -9,4 +9,7 @@ internal static class D2D1StrokeStyleMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern float ID2D1StrokeStyle_GetDashOffset(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern D2D1_DASH_STYLE ID2D1StrokeStyle_GetDashStyle(nint @this);
 }

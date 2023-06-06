@@ -9,3 +9,8 @@ auto ID2D1StrokeStyle_GetDashOffset(ID2D1StrokeStyle& _this) -> FLOAT
 {
     return _this.GetDashOffset();
 }
+
+auto ID2D1StrokeStyle_GetDashStyle(ID2D1StrokeStyle& _this) -> D2D1_DASH_STYLE
+{
+    return _this.GetDashStyle();
+}
