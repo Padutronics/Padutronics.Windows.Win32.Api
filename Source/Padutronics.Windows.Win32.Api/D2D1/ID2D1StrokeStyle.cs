@@ -6,4 +6,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1StrokeStyle : ID2D1Resource
 {
     D2D1_CAP_STYLE GetDashCap();
+    float GetDashOffset();
 }

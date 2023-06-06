@@ -13,4 +13,9 @@ public class D2D1StrokeStyle : D2D1Resource, ID2D1StrokeStyle
     {
         return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetDashCap(This);
     }
+
+    public float GetDashOffset()
+    {
+        return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetDashOffset(This);
+    }
 }
