@@ -9,4 +9,5 @@ public interface IDWriteTextFormat : IUnknown
     float GetFontSize();
     DWRITE_FONT_STRETCH GetFontStretch();
     DWRITE_FONT_STYLE GetFontStyle();
+    DWRITE_FONT_WEIGHT GetFontWeight();
 }

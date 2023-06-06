@@ -14,3 +14,8 @@ auto IDWriteTextFormat_GetFontStyle(IDWriteTextFormat& _this) -> DWRITE_FONT_STY
 {
     return _this.GetFontStyle();
 }
+
+auto IDWriteTextFormat_GetFontWeight(IDWriteTextFormat& _this) -> DWRITE_FONT_WEIGHT
+{
+    return _this.GetFontWeight();
+}
