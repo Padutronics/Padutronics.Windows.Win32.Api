@@ -10,6 +10,9 @@ internal static class D2D1RenderTargetMethods
     public static extern void ID2D1RenderTarget_BeginDraw(nint @this);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]
+    public static extern void ID2D1RenderTarget_CreateBitmap(nint @this, D2D_SIZE_U size, nint srcData, int pitch, ref D2D1_BITMAP_PROPERTIES bitmapProperties, out nint bitmap);
+
+    [DllImport(DllNames.CWrapper, PreserveSig = false)]
     public static extern void ID2D1RenderTarget_CreateBitmapBrush(nint @this, nint bitmap, nint bitmapBrushProperties, nint brushProperties, out nint bitmapBrush);
 
     [DllImport(DllNames.CWrapper, PreserveSig = false)]

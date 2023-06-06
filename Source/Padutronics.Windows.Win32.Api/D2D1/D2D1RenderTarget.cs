@@ -18,6 +18,13 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         D2D1RenderTargetMethods.ID2D1RenderTarget_BeginDraw(This);
     }
 
+    public void CreateBitmap(D2D_SIZE_U size, nint srcData, int pitch, ref D2D1_BITMAP_PROPERTIES bitmapProperties, out ID2D1Bitmap bitmap)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_CreateBitmap(This, size, srcData, pitch, ref bitmapProperties, out nint bitmapPointer);
+
+        bitmap = new D2D1Bitmap(bitmapPointer);
+    }
+
     public void CreateBitmapBrush(ID2D1Bitmap? bitmap, D2D1_BITMAP_BRUSH_PROPERTIES? bitmapBrushProperties, D2D1_BRUSH_PROPERTIES? brushProperties, out ID2D1BitmapBrush bitmapBrush)
     {
         D2D1_BITMAP_BRUSH_PROPERTIES bitmapBrushPropertiesCopy;
