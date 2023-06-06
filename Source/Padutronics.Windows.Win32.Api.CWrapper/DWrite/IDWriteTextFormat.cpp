@@ -1,5 +1,10 @@
 #include "IDWriteTextFormat.hpp"
 
+auto IDWriteTextFormat_GetFontFamilyNameLength(IDWriteTextFormat& _this) -> UINT32
+{
+    return _this.GetFontFamilyNameLength();
+}
+
 auto IDWriteTextFormat_GetFontSize(IDWriteTextFormat& _this) -> FLOAT
 {
     return _this.GetFontSize();

@@ -10,6 +10,11 @@ public class DWriteTextFormat : Unknown, IDWriteTextFormat
     {
     }
 
+    public int GetFontFamilyNameLength()
+    {
+        return DWriteTextFormatMethods.IDWriteTextFormat_GetFontFamilyNameLength(This);
+    }
+
     public float GetFontSize()
     {
         return DWriteTextFormatMethods.IDWriteTextFormat_GetFontSize(This);
