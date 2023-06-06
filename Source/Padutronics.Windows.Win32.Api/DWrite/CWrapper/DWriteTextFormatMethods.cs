@@ -9,4 +9,7 @@ internal static class DWriteTextFormatMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern DWRITE_FONT_STRETCH IDWriteTextFormat_GetFontStretch(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern DWRITE_FONT_STYLE IDWriteTextFormat_GetFontStyle(nint @this);
 }

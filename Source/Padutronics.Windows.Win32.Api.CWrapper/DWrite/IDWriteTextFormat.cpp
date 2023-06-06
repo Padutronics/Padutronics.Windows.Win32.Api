@@ -9,3 +9,8 @@ auto IDWriteTextFormat_GetFontStretch(IDWriteTextFormat& _this) -> DWRITE_FONT_S
 {
     return _this.GetFontStretch();
 }
+
+auto IDWriteTextFormat_GetFontStyle(IDWriteTextFormat& _this) -> DWRITE_FONT_STYLE
+{
+    return _this.GetFontStyle();
+}

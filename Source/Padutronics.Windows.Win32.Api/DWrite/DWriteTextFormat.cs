@@ -19,4 +19,9 @@ public class DWriteTextFormat : Unknown, IDWriteTextFormat
     {
         return DWriteTextFormatMethods.IDWriteTextFormat_GetFontStretch(This);
     }
+
+    public DWRITE_FONT_STYLE GetFontStyle()
+    {
+        return DWriteTextFormatMethods.IDWriteTextFormat_GetFontStyle(This);
+    }
 }
