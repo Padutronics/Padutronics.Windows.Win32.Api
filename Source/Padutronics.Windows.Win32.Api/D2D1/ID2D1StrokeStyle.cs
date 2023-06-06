@@ -8,4 +8,5 @@ public interface ID2D1StrokeStyle : ID2D1Resource
     D2D1_CAP_STYLE GetDashCap();
     float GetDashOffset();
     D2D1_DASH_STYLE GetDashStyle();
+    D2D1_CAP_STYLE GetEndCap();
 }

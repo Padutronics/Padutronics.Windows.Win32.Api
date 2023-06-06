@@ -23,4 +23,9 @@ public class D2D1StrokeStyle : D2D1Resource, ID2D1StrokeStyle
     {
         return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetDashStyle(This);
     }
+
+    public D2D1_CAP_STYLE GetEndCap()
+    {
+        return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetEndCap(This);
+    }
 }

@@ -14,3 +14,8 @@ auto ID2D1StrokeStyle_GetDashStyle(ID2D1StrokeStyle& _this) -> D2D1_DASH_STYLE
 {
     return _this.GetDashStyle();
 }
+
+auto ID2D1StrokeStyle_GetEndCap(ID2D1StrokeStyle& _this) -> D2D1_CAP_STYLE
+{
+    return _this.GetEndCap();
+}
