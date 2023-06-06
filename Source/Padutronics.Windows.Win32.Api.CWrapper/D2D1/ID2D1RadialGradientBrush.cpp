@@ -24,3 +24,8 @@ auto ID2D1RadialGradientBrush_GetRadiusY(ID2D1RadialGradientBrush& _this) -> FLO
 {
     return _this.GetRadiusY();
 }
+
+void ID2D1RadialGradientBrush_SetCenter(ID2D1RadialGradientBrush& _this, D2D1_POINT_2F center)
+{
+    _this.SetCenter(center);
+}

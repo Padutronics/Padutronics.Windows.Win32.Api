@@ -36,4 +36,9 @@ public class D2D1RadialGradientBrush : D2D1Brush, ID2D1RadialGradientBrush
     {
         return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetRadiusY(This);
     }
+
+    public void SetCenter(D2D_POINT_2F center)
+    {
+        D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_SetCenter(This, center);
+    }
 }
