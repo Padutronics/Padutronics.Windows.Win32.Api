@@ -12,3 +12,4 @@ EXPORT auto ID2D1RadialGradientBrush_GetRadiusY(ID2D1RadialGradientBrush& _this)
 EXPORT void ID2D1RadialGradientBrush_SetCenter(ID2D1RadialGradientBrush& _this, D2D1_POINT_2F center);
 EXPORT void ID2D1RadialGradientBrush_SetGradientOriginOffset(ID2D1RadialGradientBrush& _this, D2D1_POINT_2F gradientOriginOffset);
 EXPORT void ID2D1RadialGradientBrush_SetRadiusX(ID2D1RadialGradientBrush& _this, FLOAT radiusX);
+EXPORT void ID2D1RadialGradientBrush_SetRadiusY(ID2D1RadialGradientBrush& _this, FLOAT radiusY);

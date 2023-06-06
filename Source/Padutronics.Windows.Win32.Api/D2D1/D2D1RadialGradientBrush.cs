@@ -51,4 +51,9 @@ public class D2D1RadialGradientBrush : D2D1Brush, ID2D1RadialGradientBrush
     {
         D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_SetRadiusX(This, radiusX);
     }
+
+    public void SetRadiusY(float radiusY)
+    {
+        D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_SetRadiusY(This, radiusY);
+    }
 }

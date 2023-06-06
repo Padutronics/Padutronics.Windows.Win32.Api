@@ -39,3 +39,8 @@ void ID2D1RadialGradientBrush_SetRadiusX(ID2D1RadialGradientBrush& _this, FLOAT 
 {
     _this.SetRadiusX(radiusX);
 }
+
+void ID2D1RadialGradientBrush_SetRadiusY(ID2D1RadialGradientBrush& _this, FLOAT radiusY)
+{
+    _this.SetRadiusY(radiusY);
+}

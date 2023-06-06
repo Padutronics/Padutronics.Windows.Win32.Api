@@ -28,4 +28,7 @@ internal static class D2D1RadialGradientBrushMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RadialGradientBrush_SetRadiusX(nint @this, float radiusX);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1RadialGradientBrush_SetRadiusY(nint @this, float radiusY);
 }
