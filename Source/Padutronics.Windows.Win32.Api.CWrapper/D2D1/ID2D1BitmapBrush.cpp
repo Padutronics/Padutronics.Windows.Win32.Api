@@ -29,3 +29,8 @@ void ID2D1BitmapBrush_SetExtendModeX(ID2D1BitmapBrush& _this, D2D1_EXTEND_MODE e
 {
     _this.SetExtendModeX(extendModeX);
 }
+
+void ID2D1BitmapBrush_SetExtendModeY(ID2D1BitmapBrush& _this, D2D1_EXTEND_MODE extendModeY)
+{
+    _this.SetExtendModeY(extendModeY);
+}

@@ -40,4 +40,9 @@ public class D2D1BitmapBrush : D2D1Brush, ID2D1BitmapBrush
     {
         D2D1BitmapBrushMethods.ID2D1BitmapBrush_SetExtendModeX(This, extendModeX);
     }
+
+    public void SetExtendModeY(D2D1_EXTEND_MODE extendModeY)
+    {
+        D2D1BitmapBrushMethods.ID2D1BitmapBrush_SetExtendModeY(This, extendModeY);
+    }
 }
