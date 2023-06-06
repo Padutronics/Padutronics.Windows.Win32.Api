@@ -6,4 +6,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1GeometryGroup : ID2D1Geometry
 {
     D2D1_FILL_MODE GetFillMode();
+    int GetSourceGeometryCount();
 }

@@ -13,4 +13,9 @@ public class D2D1GeometryGroup : D2D1Geometry, ID2D1GeometryGroup
     {
         return D2D1GeometryGroupMethods.ID2D1GeometryGroup_GetFillMode(This);
     }
+
+    public int GetSourceGeometryCount()
+    {
+        return D2D1GeometryGroupMethods.ID2D1GeometryGroup_GetSourceGeometryCount(This);
+    }
 }
