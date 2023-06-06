@@ -14,3 +14,8 @@ auto ID2D1RadialGradientBrush_GetRadiusX(ID2D1RadialGradientBrush& _this) -> FLO
 {
     return _this.GetRadiusX();
 }
+
+auto ID2D1RadialGradientBrush_GetRadiusY(ID2D1RadialGradientBrush& _this) -> FLOAT
+{
+    return _this.GetRadiusY();
+}

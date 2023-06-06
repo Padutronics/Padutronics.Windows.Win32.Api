@@ -24,4 +24,9 @@ public class D2D1RadialGradientBrush : D2D1Brush, ID2D1RadialGradientBrush
     {
         return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetRadiusX(This);
     }
+
+    public float GetRadiusY()
+    {
+        return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetRadiusY(This);
+    }
 }
