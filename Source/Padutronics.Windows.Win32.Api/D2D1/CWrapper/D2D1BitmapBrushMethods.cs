@@ -18,4 +18,7 @@ internal static class D2D1BitmapBrushMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1BitmapBrush_SetBitmap(nint @this, nint bitmap);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1BitmapBrush_SetExtendModeX(nint @this, D2D1_EXTEND_MODE extendModeX);
 }

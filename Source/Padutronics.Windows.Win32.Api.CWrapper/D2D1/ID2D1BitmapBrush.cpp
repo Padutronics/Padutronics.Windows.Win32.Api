@@ -24,3 +24,8 @@ void ID2D1BitmapBrush_SetBitmap(ID2D1BitmapBrush& _this, ID2D1Bitmap* bitmap)
 {
     _this.SetBitmap(bitmap);
 }
+
+void ID2D1BitmapBrush_SetExtendModeX(ID2D1BitmapBrush& _this, D2D1_EXTEND_MODE extendModeX)
+{
+    _this.SetExtendModeX(extendModeX);
+}
