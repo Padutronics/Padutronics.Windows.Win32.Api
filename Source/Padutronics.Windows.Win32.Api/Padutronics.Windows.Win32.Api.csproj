@@ -26,7 +26,7 @@
         <CWrapperProjectName>Padutronics.Windows.Win32.Api.CWrapper</CWrapperProjectName>
     </PropertyGroup>
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-        <Copy SourceFiles="$(ProjectDir)..\$(CWrapperProjectName)\Build\$(ConfigurationName)\$(CWrapperProjectName).dll" DestinationFolder="$(ProjectDir)" />
+        <Copy SourceFiles="$(ProjectDir)../$(CWrapperProjectName)/Build/$(ConfigurationName)/$(CWrapperProjectName).dll" DestinationFolder="$(ProjectDir)" />
     </Target>
     <ItemGroup>
         <Content Include="$(CWrapperProjectName).dll" CopyToOutputDirectory="PreserveNewest" PackageCopyToOutput="true" />

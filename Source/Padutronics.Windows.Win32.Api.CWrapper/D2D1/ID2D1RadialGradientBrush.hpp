@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\Configuration.hpp"
+#include "../Configuration.hpp"
 
 #include <d2d1.h>
 
