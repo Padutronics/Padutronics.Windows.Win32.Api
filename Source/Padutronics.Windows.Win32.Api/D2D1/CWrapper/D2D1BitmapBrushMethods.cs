@@ -15,4 +15,7 @@ internal static class D2D1BitmapBrushMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern D2D1_BITMAP_INTERPOLATION_MODE ID2D1BitmapBrush_GetInterpolationMode(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1BitmapBrush_SetBitmap(nint @this, nint bitmap);
 }

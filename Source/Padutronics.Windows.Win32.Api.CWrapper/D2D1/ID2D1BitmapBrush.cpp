@@ -19,3 +19,8 @@ auto ID2D1BitmapBrush_GetInterpolationMode(ID2D1BitmapBrush& _this) -> D2D1_BITM
 {
     return _this.GetInterpolationMode();
 }
+
+void ID2D1BitmapBrush_SetBitmap(ID2D1BitmapBrush& _this, ID2D1Bitmap* bitmap)
+{
+    _this.SetBitmap(bitmap);
+}

@@ -30,4 +30,9 @@ public class D2D1BitmapBrush : D2D1Brush, ID2D1BitmapBrush
     {
         return D2D1BitmapBrushMethods.ID2D1BitmapBrush_GetInterpolationMode(This);
     }
+
+    public void SetBitmap(ID2D1Bitmap bitmap)
+    {
+        D2D1BitmapBrushMethods.ID2D1BitmapBrush_SetBitmap(This, bitmap.Pointer);
+    }
 }
