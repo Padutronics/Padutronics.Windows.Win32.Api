@@ -13,4 +13,9 @@ public class D2D1GradientStopCollection : D2D1Resource, ID2D1GradientStopCollect
     {
         return D2D1GradientStopCollectionMethods.ID2D1GradientStopCollection_GetExtendMode(This);
     }
+
+    public int GetGradientStopCount()
+    {
+        return D2D1GradientStopCollectionMethods.ID2D1GradientStopCollection_GetGradientStopCount(This);
+    }
 }

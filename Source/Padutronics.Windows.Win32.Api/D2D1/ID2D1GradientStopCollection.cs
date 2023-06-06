@@ -6,4 +6,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1GradientStopCollection : ID2D1Resource
 {
     D2D1_EXTEND_MODE GetExtendMode();
+    int GetGradientStopCount();
 }

@@ -6,4 +6,7 @@ internal static class D2D1GradientStopCollectionMethods
 {
     [DllImport(DllNames.CWrapper)]
     public static extern D2D1_EXTEND_MODE ID2D1GradientStopCollection_GetExtendMode(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern int ID2D1GradientStopCollection_GetGradientStopCount(nint @this);
 }
