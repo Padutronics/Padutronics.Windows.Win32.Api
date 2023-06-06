@@ -1,5 +1,6 @@
 using Padutronics.Windows.Win32.Api.DWrite.CWrapper;
 using Padutronics.Windows.Win32.Api.Unknwn;
+using System.Text;
 
 namespace Padutronics.Windows.Win32.Api.DWrite;
 
@@ -8,6 +9,11 @@ public class DWriteTextFormat : Unknown, IDWriteTextFormat
     public DWriteTextFormat(nint pointer) :
         base(pointer)
     {
+    }
+
+    public void GetFontFamilyName(StringBuilder fontFamilyName, int nameSize)
+    {
+        DWriteTextFormatMethods.IDWriteTextFormat_GetFontFamilyName(This, fontFamilyName, nameSize);
     }
 
     public int GetFontFamilyNameLength()

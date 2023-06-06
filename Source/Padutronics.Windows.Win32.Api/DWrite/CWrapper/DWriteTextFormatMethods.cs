@@ -1,9 +1,13 @@
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace Padutronics.Windows.Win32.Api.DWrite.CWrapper;
 
 internal static class DWriteTextFormatMethods
 {
+    [DllImport(DllNames.CWrapper, CharSet = CharSet.Unicode, PreserveSig = false)]
+    public static extern void IDWriteTextFormat_GetFontFamilyName(nint @this, StringBuilder fontFamilyName, int nameSize);
+
     [DllImport(DllNames.CWrapper)]
     public static extern int IDWriteTextFormat_GetFontFamilyNameLength(nint @this);
 
