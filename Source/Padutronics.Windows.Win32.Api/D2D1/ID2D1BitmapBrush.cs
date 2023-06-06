@@ -8,4 +8,5 @@ public interface ID2D1BitmapBrush : ID2D1Brush
     void GetBitmap(out ID2D1Bitmap bitmap);
     D2D1_EXTEND_MODE GetExtendModeX();
     D2D1_EXTEND_MODE GetExtendModeY();
+    D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode();
 }

@@ -25,4 +25,9 @@ public class D2D1BitmapBrush : D2D1Brush, ID2D1BitmapBrush
     {
         return D2D1BitmapBrushMethods.ID2D1BitmapBrush_GetExtendModeY(This);
     }
+
+    public D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode()
+    {
+        return D2D1BitmapBrushMethods.ID2D1BitmapBrush_GetInterpolationMode(This);
+    }
 }

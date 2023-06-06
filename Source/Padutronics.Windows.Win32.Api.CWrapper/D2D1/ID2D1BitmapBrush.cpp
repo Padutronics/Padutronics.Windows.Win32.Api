@@ -14,3 +14,8 @@ auto ID2D1BitmapBrush_GetExtendModeY(ID2D1BitmapBrush& _this) -> D2D1_EXTEND_MOD
 {
     return _this.GetExtendModeY();
 }
+
+auto ID2D1BitmapBrush_GetInterpolationMode(ID2D1BitmapBrush& _this) -> D2D1_BITMAP_INTERPOLATION_MODE
+{
+    return _this.GetInterpolationMode();
+}
