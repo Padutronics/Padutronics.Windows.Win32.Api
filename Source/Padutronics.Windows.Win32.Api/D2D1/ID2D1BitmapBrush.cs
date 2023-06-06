@@ -12,4 +12,5 @@ public interface ID2D1BitmapBrush : ID2D1Brush
     void SetBitmap(ID2D1Bitmap bitmap);
     void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
     void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
+    void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 }

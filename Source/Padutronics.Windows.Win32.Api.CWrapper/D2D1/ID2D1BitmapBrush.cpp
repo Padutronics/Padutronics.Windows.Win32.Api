@@ -34,3 +34,8 @@ void ID2D1BitmapBrush_SetExtendModeY(ID2D1BitmapBrush& _this, D2D1_EXTEND_MODE e
 {
     _this.SetExtendModeY(extendModeY);
 }
+
+void ID2D1BitmapBrush_SetInterpolationMode(ID2D1BitmapBrush& _this, D2D1_BITMAP_INTERPOLATION_MODE interpolationMode)
+{
+    _this.SetInterpolationMode(interpolationMode);
+}
