@@ -6,4 +6,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1BitmapBrush : ID2D1Brush
 {
     void GetBitmap(out ID2D1Bitmap bitmap);
+    D2D1_EXTEND_MODE GetExtendModeX();
 }
