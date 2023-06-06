@@ -17,6 +17,7 @@ add_library(
     D2D1/ID2D1Brush.cpp
     D2D1/ID2D1Factory.cpp
     D2D1/ID2D1Geometry.cpp
+    D2D1/ID2D1GradientStopCollection.cpp
     D2D1/ID2D1LinearGradientBrush.cpp
     D2D1/ID2D1PathGeometry.cpp
     D2D1/ID2D1RadialGradientBrush.cpp
