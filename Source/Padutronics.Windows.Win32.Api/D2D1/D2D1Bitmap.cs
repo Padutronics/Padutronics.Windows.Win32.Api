@@ -10,6 +10,11 @@ public class D2D1Bitmap : D2D1Image, ID2D1Bitmap
     {
     }
 
+    public void GetDpi(out float dpiX, out float dpiY)
+    {
+        D2D1BitmapMethods.ID2D1Bitmap_GetDpi(This, out dpiX, out dpiY);
+    }
+
     public D2D_SIZE_U GetPixelSize()
     {
         return D2D1BitmapMethods.ID2D1Bitmap_GetPixelSize(This);
