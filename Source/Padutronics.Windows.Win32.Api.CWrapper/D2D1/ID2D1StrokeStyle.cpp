@@ -19,3 +19,8 @@ auto ID2D1StrokeStyle_GetEndCap(ID2D1StrokeStyle& _this) -> D2D1_CAP_STYLE
 {
     return _this.GetEndCap();
 }
+
+auto ID2D1StrokeStyle_GetStartCap(ID2D1StrokeStyle& _this) -> D2D1_CAP_STYLE
+{
+    return _this.GetStartCap();
+}

@@ -15,4 +15,7 @@ internal static class D2D1StrokeStyleMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern D2D1_CAP_STYLE ID2D1StrokeStyle_GetEndCap(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern D2D1_CAP_STYLE ID2D1StrokeStyle_GetStartCap(nint @this);
 }
