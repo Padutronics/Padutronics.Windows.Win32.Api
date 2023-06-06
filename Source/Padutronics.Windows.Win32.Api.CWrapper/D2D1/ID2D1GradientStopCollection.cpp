@@ -9,3 +9,8 @@ auto ID2D1GradientStopCollection_GetGradientStopCount(ID2D1GradientStopCollectio
 {
     return _this.GetGradientStopCount();
 }
+
+void ID2D1GradientStopCollection_GetGradientStops(ID2D1GradientStopCollection& _this, D2D1_GRADIENT_STOP* gradientStops, UINT32 gradientStopsCount)
+{
+    _this.GetGradientStops(gradientStops, gradientStopsCount);
+}

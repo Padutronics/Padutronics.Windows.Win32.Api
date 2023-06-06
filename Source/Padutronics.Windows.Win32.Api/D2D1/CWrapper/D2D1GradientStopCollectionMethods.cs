@@ -9,4 +9,7 @@ internal static class D2D1GradientStopCollectionMethods
 
     [DllImport(DllNames.CWrapper)]
     public static extern int ID2D1GradientStopCollection_GetGradientStopCount(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1GradientStopCollection_GetGradientStops(nint @this, D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount);
 }

@@ -18,4 +18,9 @@ public class D2D1GradientStopCollection : D2D1Resource, ID2D1GradientStopCollect
     {
         return D2D1GradientStopCollectionMethods.ID2D1GradientStopCollection_GetGradientStopCount(This);
     }
+
+    public void GetGradientStops(D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount)
+    {
+        D2D1GradientStopCollectionMethods.ID2D1GradientStopCollection_GetGradientStops(This, gradientStops, gradientStopsCount);
+    }
 }

@@ -7,4 +7,5 @@ public interface ID2D1GradientStopCollection : ID2D1Resource
 {
     D2D1_EXTEND_MODE GetExtendMode();
     int GetGradientStopCount();
+    void GetGradientStops(D2D1_GRADIENT_STOP[] gradientStops, int gradientStopsCount);
 }
