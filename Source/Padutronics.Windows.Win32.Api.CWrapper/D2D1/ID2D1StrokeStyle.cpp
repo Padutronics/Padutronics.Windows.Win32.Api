@@ -15,6 +15,11 @@ auto ID2D1StrokeStyle_GetDashStyle(ID2D1StrokeStyle& _this) -> D2D1_DASH_STYLE
     return _this.GetDashStyle();
 }
 
+void ID2D1StrokeStyle_GetDashes(ID2D1StrokeStyle& _this, FLOAT* dashes, UINT32 dashesCount)
+{
+    _this.GetDashes(dashes, dashesCount);
+}
+
 auto ID2D1StrokeStyle_GetDashesCount(ID2D1StrokeStyle& _this) -> UINT32
 {
     return _this.GetDashesCount();

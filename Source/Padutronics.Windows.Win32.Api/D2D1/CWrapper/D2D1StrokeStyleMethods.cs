@@ -14,6 +14,9 @@ internal static class D2D1StrokeStyleMethods
     public static extern D2D1_DASH_STYLE ID2D1StrokeStyle_GetDashStyle(nint @this);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern void ID2D1StrokeStyle_GetDashes(nint @this, float[] dashes, int dashesCount);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern int ID2D1StrokeStyle_GetDashesCount(nint @this);
 
     [DllImport(DllNames.CWrapper)]

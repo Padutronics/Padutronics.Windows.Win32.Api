@@ -14,6 +14,11 @@ public class D2D1StrokeStyle : D2D1Resource, ID2D1StrokeStyle
         return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetDashCap(This);
     }
 
+    public void GetDashes(float[] dashes, int dashesCount)
+    {
+        D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetDashes(This, dashes, dashesCount);
+    }
+
     public int GetDashesCount()
     {
         return D2D1StrokeStyleMethods.ID2D1StrokeStyle_GetDashesCount(This);
