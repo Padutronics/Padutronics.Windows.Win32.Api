@@ -28,4 +28,23 @@ public class D2D1Geometry : D2D1Resource, ID2D1Geometry
 
         D2D1GeometryMethods.ID2D1Geometry_CombineWithGeometry(This, inputGeometry.Pointer, combineMode, inputGeometryTransformPointer, flatteningTolerance, geometrySink.Pointer);
     }
+
+    public void GetBounds(D2D_MATRIX_3X2_F? worldTransform, out D2D_RECT_F bounds)
+    {
+        D2D_MATRIX_3X2_F worldTransformCopy;
+
+        nint worldTransformPointer = nint.Zero;
+
+        if (worldTransform.HasValue)
+        {
+            worldTransformCopy = worldTransform.Value;
+
+            unsafe
+            {
+                worldTransformPointer = new nint(&worldTransformCopy);
+            }
+        }
+
+        D2D1GeometryMethods.ID2D1Geometry_GetBounds(This, worldTransformPointer, out bounds);
+    }
 }

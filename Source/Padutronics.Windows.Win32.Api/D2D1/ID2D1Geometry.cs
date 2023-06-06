@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.D2D1;
 public interface ID2D1Geometry : ID2D1Resource
 {
     void CombineWithGeometry(ID2D1Geometry inputGeometry, D2D1_COMBINE_MODE combineMode, D2D_MATRIX_3X2_F? inputGeometryTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink geometrySink);
+    void GetBounds(D2D_MATRIX_3X2_F? worldTransform, out D2D_RECT_F bounds);
 }
