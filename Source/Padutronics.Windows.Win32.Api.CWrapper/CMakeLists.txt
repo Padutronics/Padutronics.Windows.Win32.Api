@@ -27,6 +27,7 @@ add_library(
     D2D1/ID2D1RenderTarget.cpp
     D2D1/ID2D1SimplifiedGeometrySink.cpp
     D2D1/ID2D1SolidColorBrush.cpp
+    D2D1/ID2D1StrokeStyle.cpp
     D3D11/ID3D11Device.cpp
     D3D11/ID3D11DeviceContext.cpp
     DWrite/IDWriteFactory.cpp
