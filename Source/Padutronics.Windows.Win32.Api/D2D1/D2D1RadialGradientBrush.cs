@@ -14,4 +14,9 @@ public class D2D1RadialGradientBrush : D2D1Brush, ID2D1RadialGradientBrush
     {
         return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetCenter(This);
     }
+
+    public D2D_POINT_2F GetGradientOriginOffset()
+    {
+        return D2D1RadialGradientBrushMethods.ID2D1RadialGradientBrush_GetGradientOriginOffset(This);
+    }
 }
