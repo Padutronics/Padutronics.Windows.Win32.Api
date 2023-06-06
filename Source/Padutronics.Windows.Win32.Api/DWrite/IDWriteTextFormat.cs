@@ -7,4 +7,5 @@ namespace Padutronics.Windows.Win32.Api.DWrite;
 public interface IDWriteTextFormat : IUnknown
 {
     float GetFontSize();
+    DWRITE_FONT_STRETCH GetFontStretch();
 }
