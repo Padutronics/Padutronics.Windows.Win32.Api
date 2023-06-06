@@ -8,4 +8,5 @@ public interface ID2D1RadialGradientBrush : ID2D1Brush
 {
     D2D_POINT_2F GetCenter();
     D2D_POINT_2F GetGradientOriginOffset();
+    float GetRadiusX();
 }

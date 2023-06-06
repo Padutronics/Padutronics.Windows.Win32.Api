@@ -9,3 +9,8 @@ auto ID2D1RadialGradientBrush_GetGradientOriginOffset(ID2D1RadialGradientBrush& 
 {
     return _this.GetGradientOriginOffset();
 }
+
+auto ID2D1RadialGradientBrush_GetRadiusX(ID2D1RadialGradientBrush& _this) -> FLOAT
+{
+    return _this.GetRadiusX();
+}
