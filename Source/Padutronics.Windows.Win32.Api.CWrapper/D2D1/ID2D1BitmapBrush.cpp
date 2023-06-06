@@ -9,3 +9,8 @@ auto ID2D1BitmapBrush_GetExtendModeX(ID2D1BitmapBrush& _this) -> D2D1_EXTEND_MOD
 {
     return _this.GetExtendModeX();
 }
+
+auto ID2D1BitmapBrush_GetExtendModeY(ID2D1BitmapBrush& _this) -> D2D1_EXTEND_MODE
+{
+    return _this.GetExtendModeY();
+}
