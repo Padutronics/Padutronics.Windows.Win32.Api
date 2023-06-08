@@ -79,6 +79,9 @@ internal static class D2D1RenderTargetMethods
     public static extern D2D_SIZE_U ID2D1RenderTarget_GetPixelSize(nint @this);
 
     [DllImport(DllNames.CWrapper)]
+    public static extern D2D_SIZE_F ID2D1RenderTarget_GetSize(nint @this);
+
+    [DllImport(DllNames.CWrapper)]
     public static extern void ID2D1RenderTarget_GetTransform(nint @this, out D2D_MATRIX_3X2_F transform);
 
     [DllImport(DllNames.CWrapper)]

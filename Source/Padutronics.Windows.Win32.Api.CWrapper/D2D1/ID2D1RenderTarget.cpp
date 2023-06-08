@@ -120,6 +120,11 @@ auto ID2D1RenderTarget_GetPixelSize(ID2D1RenderTarget& _this) -> D2D1_SIZE_U
     return _this.GetPixelSize();
 }
 
+auto ID2D1RenderTarget_GetSize(ID2D1RenderTarget& _this) -> D2D1_SIZE_F
+{
+    return _this.GetSize();
+}
+
 void ID2D1RenderTarget_GetTransform(ID2D1RenderTarget& _this, D2D1_MATRIX_3X2_F* transform)
 {
     _this.GetTransform(transform);

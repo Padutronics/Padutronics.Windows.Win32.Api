@@ -33,6 +33,7 @@ public interface ID2D1RenderTarget : ID2D1Resource
     void FillRoundedRectangle(D2D1_ROUNDED_RECT roundedRect, ID2D1Brush brush);
     D2D1_ANTIALIAS_MODE GetAntialiasMode();
     D2D_SIZE_U GetPixelSize();
+    D2D_SIZE_F GetSize();
     void GetTransform(out D2D_MATRIX_3X2_F transform);
     void PopAxisAlignedClip();
     void PopLayer();
