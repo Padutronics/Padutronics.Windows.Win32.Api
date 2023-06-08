@@ -27,6 +27,7 @@ EXPORT void ID2D1RenderTarget_FillOpacityMask(ID2D1RenderTarget& _this, ID2D1Bit
 EXPORT void ID2D1RenderTarget_FillRectangle(ID2D1RenderTarget& _this, const D2D1_RECT_F* rect, ID2D1Brush* brush);
 EXPORT void ID2D1RenderTarget_FillRoundedRectangle(ID2D1RenderTarget& _this, const D2D1_ROUNDED_RECT* roundedRect, ID2D1Brush* brush);
 EXPORT auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIALIAS_MODE;
+EXPORT auto ID2D1RenderTarget_GetPixelSize(ID2D1RenderTarget& _this) -> D2D1_SIZE_U;
 EXPORT void ID2D1RenderTarget_GetTransform(ID2D1RenderTarget& _this, D2D1_MATRIX_3X2_F* transform);
 EXPORT void ID2D1RenderTarget_PopAxisAlignedClip(ID2D1RenderTarget& _this);
 EXPORT void ID2D1RenderTarget_PopLayer(ID2D1RenderTarget& _this);

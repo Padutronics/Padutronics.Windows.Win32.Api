@@ -289,6 +289,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         return D2D1RenderTargetMethods.ID2D1RenderTarget_GetAntialiasMode(This);
     }
 
+    public D2D_SIZE_U GetPixelSize()
+    {
+        return D2D1RenderTargetMethods.ID2D1RenderTarget_GetPixelSize(This);
+    }
+
     public void GetTransform(out D2D_MATRIX_3X2_F transform)
     {
         D2D1RenderTargetMethods.ID2D1RenderTarget_GetTransform(This, out transform);

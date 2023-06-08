@@ -115,6 +115,11 @@ auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIAL
     return _this.GetAntialiasMode();
 }
 
+auto ID2D1RenderTarget_GetPixelSize(ID2D1RenderTarget& _this) -> D2D1_SIZE_U
+{
+    return _this.GetPixelSize();
+}
+
 void ID2D1RenderTarget_GetTransform(ID2D1RenderTarget& _this, D2D1_MATRIX_3X2_F* transform)
 {
     _this.GetTransform(transform);
