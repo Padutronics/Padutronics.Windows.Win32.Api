@@ -115,6 +115,11 @@ auto ID2D1RenderTarget_GetAntialiasMode(ID2D1RenderTarget& _this) -> D2D1_ANTIAL
     return _this.GetAntialiasMode();
 }
 
+void ID2D1RenderTarget_GetDpi(ID2D1RenderTarget& _this, FLOAT* dpiX, FLOAT* dpiY)
+{
+    _this.GetDpi(dpiX, dpiY);
+}
+
 auto ID2D1RenderTarget_GetPixelSize(ID2D1RenderTarget& _this) -> D2D1_SIZE_U
 {
     return _this.GetPixelSize();

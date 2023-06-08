@@ -289,6 +289,11 @@ public class D2D1RenderTarget : D2D1Resource, ID2D1RenderTarget
         return D2D1RenderTargetMethods.ID2D1RenderTarget_GetAntialiasMode(This);
     }
 
+    public void GetDpi(out float dpiX, out float dpiY)
+    {
+        D2D1RenderTargetMethods.ID2D1RenderTarget_GetDpi(This, out dpiX, out dpiY);
+    }
+
     public D2D_SIZE_U GetPixelSize()
     {
         return D2D1RenderTargetMethods.ID2D1RenderTarget_GetPixelSize(This);
